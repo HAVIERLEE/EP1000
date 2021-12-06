@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>EP1000 Digital Fabrication & Prototyping</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheet.css" />
+  </head>
+
+
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>EP1000 Digital Fabrication & Prototyping</h1>
+    </div>
+
+    <div id="content">
+      <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about me.html">About Me</a>
+        <a href="FablabSafety.html">Fablab Safety</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Lessons
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Guides
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="Lessons/3DPrinting.html">Fusion 360</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        </div>
+      </div>
+      <div id="main">
+        <div id="aaa">
+          <h2>Home Page</h2>
+          <p>Welcome to my Website.</p>
+          <p>This website will be used by me to document my experience during my Digital Fabrication & Prototyping Fundementals elective project. Better known as EP1000.</p>
+
+          <p>What is EP1000 Digital Fabrication & Prototyping?</p>
+          <p>EP1000 Digital Fabrication & Prototyping is a module that teachs students like me how to design and fabricate our ideas. In addition, we will also learn how to document
+          our ideas using a HTML to be displayed in a web browser. Like this one !</p>
+      </div>
+    </div>
+    </div>
+    <div id="footer">
+        Copyright &copy; 2021 Javier Lee.
+    </div>
+
+
+ </div>
+ <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+</body>
+</html>
