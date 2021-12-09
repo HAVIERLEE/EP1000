@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HORUS OWNS THIS DOMAIN</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheetLessons.css" />
+  </head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>GUIDE: VECTOR DRAWING INKSCAPE</h1>
+    </div>
+    <div id="content">
+      <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="../about me.html">About Me</a>
+        <a href="../FablabSafety.html">Fablab Safety</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Blog
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../Blog/HTML.html">Web Development</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Guide
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="3DPrinting1.html">Fusion360: Knight Piece</a>
+          <a href="Vector.html">Vector</a>
+          <a href="Rastor.html">Rastor</a>
+        </div>
+        </div>
+        <a href="../project.html">Final Project</a>
+      </div>
+
+      <div id="main">
+        <div id="aaa">
+          <h2 style="color:LightGray;">HOW TO MAKE A VECTOR DRAWING</h2>
+      <p>In this guide, I am going to show you how to make a drawing in Inkscape. What you will need:</p>
+
+      <ul>
+        <li>Inkscape</li>
+        <li>A Image file of the piece you want to draw.</li>
+      </ul>
+
+      <img width="500" height="400" src="VectorGuide/Samuel.jpg" alt="ITS JETSTREAM SAM!">
+
+      <p>STEP 1 to 4: </p>
+      <div class="slideshow-container">
+        <div class="mySlides1">
+          <img src="VectorGuide/Step1.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="VectorGuide/Step2.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="VectorGuide/Step3.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="VectorGuide/Step4.png" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+      </div>
+
+      <p>Step 1: Open up Inkscape, create a new document and open up the image file you have chosen.</p>
+      <p>Step 2: On the side navigation bar, since Draw Bezier curves and straight lines. This will allow you to draw on the image.</p>
+      <p>Step 3: Select the BSpline path and draw over a select part of the body. I chose the Penguin's Body for an example.</p>
+      <p>Step 4: Once drawn it should look like this:</p>
+
+      <p>STEP 5 to 8: Sketching the Base and Revolving.</p>
+      <div class="slideshow-container">
+        <div class="mySlides2">
+          <img src="VectorGuide/Step5.png" style="width:100%">
+        </div>
+
+        <div class="mySlides2">
+          <img src="VectorGuide/Step6.png" style="width:100%">
+        </div>
+
+        <div class="mySlides2">
+          <img src="VectorGuide/Step7.png" style="width:100%">
+        </div>
+
+        <div class="mySlides2">
+          <img src="VectorGuide/Step8.png" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+      </div>
+
+      <p>Step 5: Once you have drawn the body, you can go to the colour bar and and use either left click or right click. The effects are listed below:</p>
+      <ul>
+        <li>Left click to "fill" in the empty space in your shape.</li>
+        <li>Right Click to change the colour of the outline of your shape.</li>
+      </ul>
+      <p>Step 6: Repeat by breaking down the animal into seperate parts like the head, body and legs and draw in the outline and filling them in with colours.</p>
+      <p>Step 7: Once done it should look like this.</p>
+      <p>Step 8: Or not. As it turns out using a white colour as your body means that the it will also appeared as though it has merged with the background</p>
+
+      <img src="VectorGuide/Done.png" style="width:100%">
+
+      <p>After chaging the colour from 0% black to 2.5% black, and redrawing the right wing so it matches the left, this is my final product.</p>
+
+
+
+      </div>
+    </div>
+    <div id="footer">
+        Copyright &copy; 2021 Javier Lee.
+    </div>
+  </div>
+
+
+ </div>
+ <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex[no]-1].style.display = "block";
+}
+</script>
+</body>
+</html>

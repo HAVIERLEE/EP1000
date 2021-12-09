@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HORUS OWNS THIS DOMAIN</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheetLessons.css" />
+  </head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>GUIDE: RASTORS</h1>
+    </div>
+    <div id="content">
+      <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="../about me.html">About Me</a>
+        <a href="../FablabSafety.html">Fablab Safety</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Blog
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="Blog/HTML.html">Web Development</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Guide
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="3DPrinting1.html">Fusion360: Knight Piece</a>
+          <a href="Vector.html">Vector</a>
+          <a href="Rastor.html">Rastor</a>
+        </div>
+        </div>
+        <a href="../project.html">Final Project</a>
+      </div>
+
+      <div id="main">
+        <div id="aaa">
+          <h2 style="color:LightGray;">HOW TO USE PHOTOSHOP TO TRAVEL THE WORLD! (A guide to GIMP)</h2>
+      <p>In this guide, I am going to show you how to remove the background of an image and replace it with something else. What you will need:</p>
+
+      <ul>
+        <li>GIMP</li>
+        <li>A Image file of you or a subject.</li>
+        <li>A Image file of the background you want to use to replace.</li>
+      </ul>
+
+      <p>STEP 1 to 4: </p>
+      <div class="slideshow-container">
+        <div class="mySlides1">
+          <img src="RastorGuide/Step1.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="RastorGuide/Step2.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="RastorGuide/Step3.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="RastorGuide/Step4.png" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+      </div>
+
+      <p>Step 1: Open up GIMP, and choose your image file.</p>
+      <p>Step 2: Go to Layer and under the Transparency tabm go to 'Add Alpha Channel'</p>
+      <p>Step 3: Once selected go to the top left corner and find the 'Free Select Tool'.</p>
+      <p>Step 4: Using the 'Free Select Tool' draw an outline over your subject.</p>
+
+      <p>STEP 5 to 8: Sketching the Base and Revolving.</p>
+      <div class="slideshow-container">
+        <div class="mySlides2">
+          <img src="RastorGuide/Step5.png" style="width:100%">
+        </div>
+
+        <div class="mySlides2">
+          <img src="RastorGuide/Step6.png" style="width:100%">
+        </div>
+
+        <div class="mySlides2">
+          <img src="RastorGuide/Step7.png" style="width:100%">
+        </div>
+
+        <div class="mySlides2">
+          <img src="RastorGuide/Step8.png" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+      </div>
+
+      <p>Step 5: Once drawn, hover down to free select and go to the thrid tab from the left. This will allow yo to remove spaces from within your outline.</p>
+      <p>Step 6: As an exmaple the space between my headset's mic and face still has the background behind it. So I am going to remove it.</p>
+      <p>Step 7: Once all selected, go to the top tab and click on select, and then 'Invert'. This is because the outlines that you have drawn is over your subject. So you will have to invert it remove the background.</p>
+      <p>Step 8: Hit the 'del' key to remove th background.</p>
+
+      <ul>
+        <li><a href="Rastor.html">Page 1</a></li>
+        <li><a href="Rastor2.html">Page 2</a></li>
+      </ul>
+
+      </div>
+    </div>
+    <div id="footer">
+        Copyright &copy; 2021 Javier Lee.
+    </div>
+  </div>
+
+
+ </div>
+ <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex[no]-1].style.display = "block";
+}
+</script>
+</body>
+</html>

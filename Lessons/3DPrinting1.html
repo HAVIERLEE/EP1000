@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HORUS OWNS THIS DOMAIN</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheetLessons.css" />
+  </head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>GUIDE: FUSION 360 </h1>
+    </div>
+    <div id="content">
+      <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="../about me.html">About Me</a>
+        <a href="../FablabSafety.html">Fablab Safety</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Blog
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="Blog/HTML.html">Web Development</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Guide
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="3DPrinting1.html">Fusion360: Knight Piece</a>
+          <a href="Vector.html">Vector</a>
+          <a href="Rastor.html">Rastors</a>
+        </div>
+        </div>
+        <a href="../project.html">Final Project</a>
+      </div>
+
+      <div id="main">
+        <div id="aaa">
+          <h2 style="color:LightGray;">HOW TO DRAW A KNIGHT CHESS PIECE IN FUSION 360</h2>
+      <p>In this guide, I am going to show you how to make a Knight Piece in Fusion 360. What you will need:</p>
+
+      <ul>
+        <li>Fusion 360</li>
+        <li>A 2D Jpg/Png/Image file... of a Knight Chess Piece</li>
+      </ul>
+
+      <p>STEP 1 to 4: Drawing the Outline</p>
+      <div class="slideshow-container">
+        <div class="mySlides1">
+          <img src="FusionGuide/Step1.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="FusionGuide/Step2.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="FusionGuide/Step3.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="FusionGuide/Step4.png" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+      </div>
+
+      <p>Step 1: Create a new file in Fusion 360 and select the XZ plane.</p>
+      <p>Step 2: In Sketch mode draw 2 lines which will act as your width (15mm) and height (50mm).</p>
+      <p>Step 3: Hover over to the Insert tab on the menu section and find the 'Canvas' option.</p>
+      <p>Step 4: Upload the Knight Chess Piece picture you have select and adjust it to fit into the lines you have drawn.</p>
+
+      <p>STEP 5 to 8: Sketching the Base and Revolving.</p>
+      <div class="slideshow-container">
+        <div class="mySlides2">
+          <img src="FusionGuide/Step5.png" style="width:100%">
+        </div>
+
+        <div class="mySlides2">
+          <img src="FusionGuide/Step6.png" style="width:100%">
+        </div>
+
+        <div class="mySlides2">
+          <img src="FusionGuide/Step7.png" style="width:100%">
+        </div>
+
+        <div class="mySlides2">
+          <img src="FusionGuide/Step8.png" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+      </div>
+
+      <p>Step 5: On the same plane, using the Sketch Mode, draw half of the base. I use the Spline feature (highlighted in blue) to skectch the curvy part of the base.</p>
+      <p>Step 6: On the Solid tab, pick the Revolve option (Third from the left).</p>
+      <p>Step 7: Once chosen, you can pick the base that you have drawn.</p>
+      <p>Step 8: After you have finsihed Revolving it should look like this.</p>
+
+      <p>Once you are done with step 8. Head on over to the next page for Step 9 - 16. Alternatively, if you have already seen this guide before you can refer to the Tips and Tricks page.</p>
+      <ul>
+        <li><a href="3DPrinting1.html">Page 1</a></li>
+        <li><a href="3DPrinting2.html">Page 2</a></li>
+        <li><a href="3DPrinting3.html">Tips and Tricks</a></li>
+      </ul>
+
+      </div>
+    </div>
+    <div id="footer">
+        Copyright &copy; 2021 Javier Lee.
+    </div>
+  </div>
+
+
+ </div>
+ <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex[no]-1].style.display = "block";
+}
+</script>
+</body>
+</html>
