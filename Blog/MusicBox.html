@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheetblog.css" />
+  </head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>BLOG: Making a Music Box for my Dad's Birthday</h1>
+    </div>
+    <div id="content">
+      <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="../about me.html">About Me</a>
+        <a href="../FablabSafety.html">Fablab Safety</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Blog
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../Blog/HTML.html">Web Development</a>
+          <a href="../Blog/vectorvsrastor.html">Vector Vs Raster</a>
+          <a href="../Blog/htmlvscss.html">HTML and CSS</a>
+          <a href="MusicBox.html">Creating a Music Box</a>
+          <a href="Arduino.html">Arduino Test Log</a>
+        </div>
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Guide
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../Lessons/3DPrinting1.html">Fusion360: Knight Piece</a>
+          <a href="../Lessons/Vector.html">Vector</a>
+          <a href="../Lessons/Rastor.html">Rastor</a>
+        </div>
+        </div>
+        <a href="../tooltable.html">Tool Table</a>
+        <a href="../project.html">Final Project</a>
+      </div>
+
+      <div id="main">
+        <div id="aaa">
+          <h2 style="color:LightGray;">Making a Music Box for my Dad's Birthday</h2>
+      <p>I have decided to make a Music Box for my dad's Birthday. There are two very important part to make a music box. The Music Box's internals and the Box itself. My Teacher
+      will be passing us the Music Box internals so the only thing I have to do is to make the music Box. These are software and materials I used:</p>
+
+      <ul>
+        <li>Fusion 360 - To Desgin the Music Box</li>
+        <li>Inkscape - To help layout the Design for Laser Cutting and creating the Penguin Vector</li>
+        <li>CorelDRAW - Used to prep the SVG file for laser Cutting</li>
+        <li>3mm thick wood</li>
+      </ul>
+
+      <p>PHASE 1. Using Fusion 360 to make the Box</p>
+      <div class="slideshow-container">
+        <div class="mySlides1">
+          <img src="MusicBox/Laserbox1.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="MusicBox/Laserbox3.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="MusicBox/Laserbox4.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="MusicBox/Laserbox7.png" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+      </div>
+
+      <p>My Dad likes a minimalist design. He doesn't like his gifts to be too complex and expensive, so I design the Music Box to be as simple as possible.
+        Based on what I have learnt, to create each side I would have to manually create each side and input the lenght height and breath. However, after I was showed
+        how to use the "Change Parameters" tab, I was able to input my ideal length, width, height and thickness for the Box. This makes the entire the design process mcuh more
+        easier and faster by ten folds. I no longer have to keep track of the numbers I want to use and change each of them when i feel it is too big or small. I could just input the name of the Parameter, and if I ever felt that maybe the
+        box was too small or too big, I can just change the Parameter and everything labeled under it would change as well. </p>
+
+      <p>In addition to this, I made 3 additional parameters, these are "Nlen", "Nwid" and "Nheight". This is for the amount of "teeth" I want to make per side. This is because
+      in order to attach the two sides and make it flush in appearance, I would have to glue them together and the "teeth" would help with that. On hindsight I should have renamed "Nheight" to something like "Nhei"</p>
+
+      <div class="slideshow-container">
+        <div class="mySlides2">
+          <img src="MusicBox/Laserbox8.png" style="width:100%">
+        </div>
+
+        <div class="mySlides2">
+          <img src="MusicBox/Laserbox9.png" style="width:100%">
+        </div>
+
+        <div class="mySlides2">
+          <img src="MusicBox/Laserbox10.png" style="width:100%">
+        </div>
+
+        <div class="mySlides2">
+          <img src="MusicBox/Laserbox12.png" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+      </div>
+
+      <p>After making one side, I would use the copy and paste option as it is faster than making another side and painfully redrawing all the teeth. Once both side is created
+      Fusion recognize my product as one solid object, to change this I will use the "Combine" feature to split the entire product into 3 seperate bodies. I will repeat this
+    step one more time for the abother sides and in a new record time, I have successfully created a box in Fusion 360</p>
+
+    <img src="MusicBox/Laserbox16.png" style="width:100%">
+
+    <p>I added on a lid to cover everything and to make it able to move, I made two additonal holes along the sides of the lid where I want it to open. The inner diameter of the hole is larger than the thickness of the wood. This is the final product.</p>
+
+      <p>This is still only Phase 1. In the next Phase I will be converting the 3D drawings into 2D ones and importing them into Inkscape where I will add my penguin vector and message along with prepping the file to be laser cut.</p>
+      <ul>
+        <li><a href="MusicBox.html">PHASE 1</a></li>
+        <li><a href="MusicBoxP2.html">PHASE 2</a></li>
+        <li><a href="MusicBoxP3.html">PHASE 3</a></li>
+      </ul>
+
+      </div>
+    </div>
+    <div id="footer">
+        Copyright &copy; 2021 Javier Lee.
+    </div>
+  </div>
+
+
+ </div>
+ <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex[no]-1].style.display = "block";
+}
+</script>
+</body>
+</html>

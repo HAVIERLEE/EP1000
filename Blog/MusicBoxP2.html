@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HORUS OWNS THIS DOMAIN</title>
-    <link rel="stylesheet" type="text/css" href="./stylesheetLessons.css" />
+    <title>Blog</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheetblog.css" />
   </head>
 <body>
   <div id="container">
     <div id="header">
-      <h1>GUIDE: FUSION 360 </h1>
+      <h1>BLOG: Making a Music Box for my Dad's Birthday</h1>
     </div>
     <div id="content">
       <div class="navbar">
@@ -22,8 +22,8 @@
           <a href="../Blog/HTML.html">Web Development</a>
           <a href="../Blog/vectorvsrastor.html">Vector Vs Raster</a>
           <a href="../Blog/htmlvscss.html">HTML and CSS</a>
-          <a href="../Blog/MusicBox.html">Creating a Music Box</a>
-          <a href="../Blog/Arduino.html">Arduino Test Log</a>
+          <a href="MusicBox.html">Creating a Music Box</a>
+          <a href="Arduino.html">Arduino Test Log</a>
         </div>
         </div>
         <div class="dropdown">
@@ -31,9 +31,9 @@
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content" id="myDropdown">
-          <a href="3DPrinting1.html">Fusion360: Knight Piece</a>
-          <a href="Vector.html">Vector</a>
-          <a href="Rastor.html">Rastors</a>
+          <a href="../Lessons/3DPrinting1.html">Fusion360: Knight Piece</a>
+          <a href="../Lessons/Vector.html">Vector</a>
+          <a href="../Lessons/Rastor.html">Rastor</a>
         </div>
         </div>
         <a href="../tooltable.html">Tool Table</a>
@@ -42,73 +42,66 @@
 
       <div id="main">
         <div id="aaa">
-          <h2 style="color:LightGray;">HOW TO DRAW A KNIGHT CHESS PIECE IN FUSION 360</h2>
-      <p>In this guide, I am going to show you how to make a Knight Piece in Fusion 360. Note that these pictures are slideshows, so you can click on the left and right side of the screen to look at the next images. What you will need:</p>
+          <h2 style="color:LightGray;">Making a Music Box for my Dad's Birthday</h2>
 
-      <ul>
-        <li>Fusion 360</li>
-        <li>A 2D Jpg/Png/Image file... of a Knight Chess Piece</li>
-      </ul>
-
-      <p>STEP 1 to 4: Drawing the Outline</p>
+      <p>PHASE 2. Going from Fusion 360 to Inkscape</p>
       <div class="slideshow-container">
         <div class="mySlides1">
-          <img src="FusionGuide/Step1.png" style="width:100%">
+          <img src="MusicBox/Inkscape1.png" style="width:100%">
         </div>
 
         <div class="mySlides1">
-          <img src="FusionGuide/Step2.png" style="width:100%">
+          <img src="MusicBox/Inkscape2.png" style="width:100%">
         </div>
 
         <div class="mySlides1">
-          <img src="FusionGuide/Step3.png" style="width:100%">
-        </div>
-
-        <div class="mySlides1">
-          <img src="FusionGuide/Step4.png" style="width:100%">
+          <img src="MusicBox/MusicBoxInk.png" style="width:100%">
         </div>
 
         <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
         <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
       </div>
 
-      <p>Step 1: Create a new file in Fusion 360 and select the XZ plane.</p>
-      <p>Step 2: In Sketch mode draw 2 lines which will act as your width (15mm) and height (50mm).</p>
-      <p>Step 3: Hover over to the Insert tab on the menu section and find the 'Canvas' option.</p>
-      <p>Step 4: Upload the Knight Chess Piece picture you have select and adjust it to fit into the lines you have drawn.</p>
+      <p>To convert my CAD model from Fusion 360 to Inkscape, I have to select a side and create a sketch using the existing shape.
+        Once a new sketch with the shape has been created, I can export it as a DXF (Drawing) file. I can use Inkscape to open the DXF file
+        and repeat that a few more times until I have all of the sides made. While in Inkscape I can change the outline of the drawing to the
+        colour red. This is because, for the settings used in laser cutting software, Red Hairline lines tells the Laser Cutter to cut out that
+        line. While Black Solids like the "Happy Birthday Dad" acts as a shape for engraving the message.
+     </p>
 
-      <p>STEP 5 to 8: Sketching the Base and Revolving.</p>
       <div class="slideshow-container">
         <div class="mySlides2">
-          <img src="FusionGuide/Step5.png" style="width:100%">
+          <img src="MusicBox/Penguin.png" style="width:100%">
         </div>
 
         <div class="mySlides2">
-          <img src="FusionGuide/Step6.png" style="width:100%">
+          <img src="MusicBox/MusicBoxInkPen.png" style="width:100%">
         </div>
 
         <div class="mySlides2">
-          <img src="FusionGuide/Step7.png" style="width:100%">
-        </div>
-
-        <div class="mySlides2">
-          <img src="FusionGuide/Step8.png" style="width:100%">
+          <img src="MusicBox/CorelDrawPB.jpg" style="width:100%">
         </div>
 
         <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
         <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
       </div>
 
-      <p>Step 5: On the same plane, using the Sketch Mode, draw half of the base. I use the Spline feature (highlighted in blue) to skectch the curvy part of the base.</p>
-      <p>Step 6: On the Solid tab, pick the Revolve option (Third from the left).</p>
-      <p>Step 7: Once chosen, you can pick the base that you have drawn.</p>
-      <p>Step 8: After you have finsihed Revolving it should look like this.</p>
+      <p>My father loves Penguins and so do I. So for his birthday I created a Penguin Vector Drawing similiar to the one I did for
+      my <a href="../Lessons/Vector.html">Vector Drawing Guide.</a> To import this image into the same drawing as my Music Box, I just need to
+      go to the top right tab named "file" and use the "import" tab and select the penguin SVG file and merge the two.</p>
 
-      <p>Once you are done with step 8. Head on over to the next page for Step 9 - 16. Alternatively, if you have already seen this guide before you can refer to the Tips and Tricks page.</p>
+      <p>Unfortunately, while importing the DXF file into CorelDraw, I made a mistake while converting it and can only open
+        the Penguin Vector Drawing file and the Music Box wihtout the Penguin Drawing file. I had to merge both of them
+        together again in corelDRAW and convert the outlines. This might be due to the fact that while in Inkscape I saved the
+      merged drawing as an SVG 2014 file instead or a SVG 2012. I have yet to look into the cause but this was only a slight hinderance. </p>
+
+
+
+      <p>As of Phase 2, with the file in CorelDRAW I can now upload it on to the Laser Cutter so I can cut it out.</p>
       <ul>
-        <li><a href="3DPrinting1.html">Page 1</a></li>
-        <li><a href="3DPrinting2.html">Page 2</a></li>
-        <li><a href="3DPrinting3.html">Tips and Tricks</a></li>
+        <li><a href="MusicBox.html">PHASE 1</a></li>
+        <li><a href="MusicBoxP2.html">PHASE 2</a></li>
+        <li><a href="MusicBoxP3.html">PHASE 3</a></li>
       </ul>
 
       </div>

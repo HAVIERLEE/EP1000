@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheetblog.css" />
+  </head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>BLOG: Making a Music Box for my Dad's Birthday</h1>
+    </div>
+    <div id="content">
+      <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="../about me.html">About Me</a>
+        <a href="../FablabSafety.html">Fablab Safety</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Blog
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../Blog/HTML.html">Web Development</a>
+          <a href="../Blog/vectorvsrastor.html">Vector Vs Raster</a>
+          <a href="../Blog/htmlvscss.html">HTML and CSS</a>
+          <a href="MusicBox.html">Creating a Music Box</a>
+          <a href="Arduino.html">Arduino Test Log</a>
+        </div>
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Guide
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../Lessons/3DPrinting1.html">Fusion360: Knight Piece</a>
+          <a href="../Lessons/Vector.html">Vector</a>
+          <a href="../Lessons/Rastor.html">Rastor</a>
+        </div>
+        </div>
+        <a href="../tooltable.html">Tool Table</a>
+        <a href="../project.html">Final Project</a>
+      </div>
+
+      <div id="main">
+        <div id="aaa">
+          <h2 style="color:LightGray;">Making a Music Box for my Dad's Birthday</h2>
+
+      <p>PHASE 3. Laser Cutting and Assembly</p>
+      <div class="slideshow-container">
+        <div class="mySlides1">
+          <img src="MusicBox/LaserCutter.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="MusicBox/LaserCutterError.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="MusicBox/LaserCuttingFix.jpg" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+      </div>
+
+      <p>Due to a Lack of 3mm wood at Makerspace, the place I was Laser Cutting, I had to use 5mm wood instead. I did need to change my Fusion 360 Drawing as
+        the Laser cutter does not need to know the thickness of wood while cutting. However, as I was placing the wood into the cutter, I notice that the wood was
+        slightly sticking out. This is bad because the wood will be lose in the machine while it is cutting which isn't ideal. So I had to use a masking tape to tape
+        the wood in place so it will be flat. It is not the best fix but it was faster than looking around for a flat piece of wood and better as other people were
+        queuing for the Machine.
+     </p>
+
+     <img src="MusicBox/LaserCutterSetting.jpg" style="width:100%">
+
+      <p>With the drawing finished and the wood set in the machine, I went to the Laser Cutting Software Setting to choose the setting for
+        the laser cutter. Since I will be cutting into a 5mm thick wood instead of 3mm, I changed the pre-made setting profile to 5mm instead of the preivous 3mm.
+        Once done, I when on to choose the top corner of the board and key in its location into the Software. Once I believe everything was set, I hit the start button.
+      </p>
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/v24XrYPqTNI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      <p>The Video above shows a time lapse video of my music box being laser cut. As may you notice head of the laser cutter cutting over one of the sides twice. This is becuase I forgot to check
+      if there was addtional lines underneath one of my sides. Which caused the cutter to go over it twice. This is not good becasue, it causes the cuts to be less precise and makes the shape a tad bit smaller. So I had to do a new one since this will be a gift.</p>
+
+      <div class="slideshow-container">
+        <div class="mySlides2">
+          <img src="MusicBox/IMG_7671.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides2">
+          <img src="MusicBox/IMG_7672.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides2">
+          <img src="MusicBox/IMG_7673.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides2">
+          <img src="MusicBox/IMG_7675.jpg" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+      </div>
+
+      <p>With all the pieces cut out and the internals delivered, I hotglue everything together and the box managed to fit nicely inside the box. Just in time to wish my Dad a Happy Birthday.</p>
+      <ul>
+        <li><a href="MusicBox.html">PHASE 1</a></li>
+        <li><a href="MusicBoxP2.html">PHASE 2</a></li>
+        <li><a href="MusicBoxP3.html">PHASE 3</a></li>
+      </ul>
+
+      </div>
+    </div>
+    <div id="footer">
+        Copyright &copy; 2021 Javier Lee.
+    </div>
+  </div>
+
+
+ </div>
+ <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex[no]-1].style.display = "block";
+}
+</script>
+</body>
+</html>
