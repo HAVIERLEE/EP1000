@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HORUS OWNS THIS DOMAIN</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheetblog.css" />
+  </head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>GUIDE: FUSION 360 </h1>
+    </div>
+    <div id="content">
+      <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="../about me.html">About Me</a>
+        <a href="../FablabSafety.html">Fablab Safety</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Blog
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="HTML.html">Web Development</a>
+          <a href="vectorvsrastor.html">Vector Vs Raster</a>
+          <a href="htmlvscss.html">HTML and CSS</a>
+          <a href="MusicBox.html">Creating a Music Box</a>
+          <a href="Arduino.html">Arduino Test Log</a>
+          <a href="Printing1.html">3D Printing Attempts</a>
+        </div>
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Guide
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../Lessons/3DPrinting1.html">Fusion360: Knight Piece</a>
+          <a href="../Lessons/A3DPrinting1.html">3D Printing</a>
+          <a href="../Lessons/Vector.html">Vector</a>
+          <a href="../Lessons/Rastor.html">Rastor</a>
+        </div>
+        </div>
+        <a href="../tooltable.html">Tool Table</a>
+        <a href="../project.html">Final Project</a>
+      </div>
+
+      <div id="main">
+        <div id="aaa">
+          <h2 style="color:LightGray;">MY ATTEMPTS AT 3D PRINTING</h2>
+      <p>Learning from my mistakes I made a 3rd attempt @ T14 Fablab. This is where they used the "Ultimaker 2+" which although was released roughly 5 years ago, still worked like a chram and gave out good quality prints as though it was factory new.</p>
+
+      <p>ATTEMPT 3: Ultimaker 2+</p>
+      <div class="slideshow-container">
+        <div class="mySlides1">
+          <img src="Printing/UltM1.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="Printing/UltM2.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="Printing/UltMt3.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="Printing/UltM4.jpg" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+      </div>
+
+      <p>I used the default setting on the printer as I believed that they are the ideal settings. I only altered the infill Density to speed up my print since we were only allowed 50 mins.</p>
+
+      <table style="width:100%">
+      <tr>
+        <th>Profile</th>
+        <th>Settings</th>
+      </tr>
+      <tr>
+        <td>Quality</td>
+        <td>Layer Height: 0.2mm, Initial Layer Height: 0.27mm</td>
+      </tr>
+      <tr>
+        <td>Walls</td>
+        <td>Wall Thickness: 0.8mm</td>
+      </tr>
+      <tr>
+        <td>Infill</td>
+        <td>Infill Density 15%</td>
+      </tr>
+      <tr>
+        <td>Material</td>
+        <td>Printing Temperature: 200°c, Build Plate Temperature: 60°c</td>
+      </tr>
+      <tr>
+        <td>Speed</td>
+        <td>Print Speed: 60 mm/s</td>
+      </tr>
+      <tr>
+        <td>Support</td>
+        <td>Generate Support: Yes, Support Pattern: Zig Zag, Support Density 15%</td>
+      </tr>
+      </table>
+
+      <p>Total Print Time: 50 I am quite happy with the way this print turn out. The overall quality is what I want and the details on the model I made can be seen clearly. The ears on the knight piece is not melted toether and
+      the surface appears smooth. The only thing I wish I could have done is reduce the layer height to 0.1mm or less but we do not have the time for that.</p>
+
+      <ul>
+
+        <li><a href="Printing1.html">Page 1</a></li>
+        <li><a href="Printing2.html">Page 2</a></li>
+
+      </ul>
+
+      </div>
+    </div>
+    <div id="footer">
+        Copyright &copy; 2021 Javier Lee.
+    </div>
+  </div>
+
+
+ </div>
+ <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex[no]-1].style.display = "block";
+}
+</script>
+</body>
+</html>
