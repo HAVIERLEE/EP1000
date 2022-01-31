@@ -7,7 +7,7 @@
 <body>
   <div id="container">
     <div id="header">
-      <h1>GUIDE: FUSION 360 </h1>
+      <h1>GUIDE: 3D PRINT </h1>
     </div>
     <div id="content">
       <div class="navbar">
@@ -44,73 +44,204 @@
 
       <div id="main">
         <div id="aaa">
-          <h2 style="color:LightGray;">HOW TO 3D PRINT</h2>
-      <p>In this guide, I am going to show you prep an STL file for 3D printing using Ultimaker Cura.</p>
-      <p>What you will need:</p>
+          <h2 style="color:LightGray;">Overview on 3D Printing</h2>
+      <p>In this guide, I am going to do a quick overview on 3D printing and show you prep an STL file for 3D printing using Ultimaker Cura.</p>
+      <h3 style="color:LightGray;">What is 3D printing?</h3>
+
+      <table style="width:100%">
+        <tr>
+          <th>Additive</th>
+          <th>Subtractive</th>
+        </tr>
+          <tr>
+            <td><img src="3DPrintingGuide/fabsub2.jpg" style="width:600px "></td>
+            <td><img src="3DPrintingGuide/fabsub.jpg" style="width:550px"></td>
+        </tr>
+      </table>
+
+      <p>3D printing also known as additive manufacturing is a process of creating a solid object from a digital drawing. The creation of a 3D printed object is made through the
+      use of the additive processes. In an additive process an object is creaeted by laying down successive layers of material until the object is created. Each of these layers can be seen as a thinly sliced cross-section of the object.
+      This is contrast to subtractive manufacturing where the material is removed from a solid block to create the object. 3D printing enables you to produce complex shapes using less material than traditional manufacturing methods.</p>
+
+      <h3 style="color:LightGray;">What are the benefits of 3D printing?</h3>
+
+      <p>One of the main advantage of 3D printing is that anyone who has the necessary skill and equipment can manufacture anything they want. It can be ideal for rapid prototypinng helping with visualisation. The only disadvantage
+      is that it is very slow. The material may not have the strength.</p>
+
+      <h3 style="color:LightGray;">This is the Workflow of how 3D printers work</h3>
+
+      <p>Fusion 360 file > .STL file > Cura (A Slicer) >  Gcode (Machine Code basically insturctions for a 3D printer to understand) >  3D printer</p>
+
+      <ol>
+        <li>Create a 3D Model of the object using CAD</li>
+        <li>Extract the 3D Model representation (.STL, .OBJ, .3MF)</li>
+        <li>Use a slicer (e.g. CURA) to slice the model into layers.</li>
+        <li>Extract each layer into a machine readable file (.GCODE)</li>
+        <li>. Send to the 3D Printer for fabrication</li>
+      </ol>
+
+      <h3 style="color:LightGray;">Layer Height</h3>
+
+      <table style="width:100%">
+        <tr>
+          <th>Example</th>
+          <th>Explaination</th>
+        </tr>
+          <tr>
+            <td><img src="3DPrintingGuide/layH.png" style="width:100%"></td>
+            <td>
+
+              <ul>
+                <li>The picture shows the height of each printed layer</li>
+                <li>The Thinner layers give finer prints, however, this will result in a slower print time</li>
+                <li>Range: 0.1 ~ 0.4 mm (½ nozzle diameter)</li>
+                <li>Affects resolution, smoothness and time taken to print.</li>
+              </ul>
+
+            </td>
+        </tr>
+      </table>
+
+      <h3 style="color:LightGray;">Wall Thickness</h3>
+
+      <table style="width:100%">
+        <tr>
+          <th>Example</th>
+          <th>Explaination</th>
+        </tr>
+          <tr>
+            <td><img src="3DPrintingGuide/WallThick.png" style="width:300px "></td>
+            <td>
+
+              <ul>
+                <li>Wall Thickness creates the number of strands to make up the thickness of the wall.</li>
+                <li>This affects time and strength of print</li>
+                <li>Example: Wall thickness = 3mm using 0.2 layer</li>
+                <li>Inner wall : 0.8 mm</li>
+                <li>Outer wall : 0.8 mm</li>
+                <li>Wall thickness: 1.4 mm (7 passes of the nozzle)</li>
+              </ul>
+
+            </td>
+        </tr>
+      </table>
+
+      <h3 style="color:LightGray;">Infill Percentages</h3>
+
+      <table style="width:100%">
+        <tr>
+          <th>Example</th>
+          <th>Explaination</th>
+        </tr>
+          <tr>
+            <td><img src="3DPrintingGuide/Infillp.jpg" style="width:300px "></td>
+            <td>
+
+              <ul>
+                <li>Controls the amount of fill in the internal cavities.</li>
+                <li>Higher percentages take longer time, but higher strength</li>
+                <li>Example: Wall thickness = 3mm using 0.2 layer</li>
+                <li>Can specify the type of infill pattern structure (lines, triangles)</li>
+                <li>Typical infill: 10 ~ 20%</li>
+              </ul>
+
+            </td>
+        </tr>
+      </table>
+
+      <h3 style="color:LightGray;">Infill Percentages</h3>
+
+      <table style="width:100%">
+        <tr>
+          <th>Example</th>
+          <th>Explaination</th>
+        </tr>
+          <tr>
+            <td><img src="3DPrintingGuide/Brid.png" style="width:300px "></td>
+            <td>
+
+              <ul>
+                <li>Prints between 2 points that have no connection to each other.</li>
+                <li>3D Printer prints the base layer, then the vertical structures.</li>
+                <li>Horizontal structures have no supports other than at the end.</li>
+                <li>There is a max distance you can bridge without stringing</li>
+              </ul>
+
+            </td>
+        </tr>
+      </table>
+
+      <h3 style="color:LightGray;">Overhang limits</h3>
+
+      <table style="width:100%">
+        <tr>
+          <th>Example</th>
+          <th>Explaination</th>
+        </tr>
+          <tr>
+            <td><img src="3DPrintingGuide/Overh.png" style="width:300px "></td>
+            <td>
+
+              <ul>
+                <li>Most printers can handle an overhang of 45°.</li>
+                <li>There is a limit where there is insufficient support</li>
+                <li>All 3D printers cannot print on air</li>
+                <li>It is recommended that you do a test print to determine your overhang angle</li>
+              </ul>
+
+            </td>
+        </tr>
+      </table>
+
+      <h3 style="color:LightGray;">Platform adhesion</h3>
+
+      <table style="width:100%">
+        <tr>
+          <th>Example</th>
+          <th>Explaination</th>
+        </tr>
+          <tr>
+            <td><img src="3DPrintingGuide/platad.png" style="width:300px "></td>
+            <td>
+
+              <ul>
+                <li>Printer bed is heated to improve adhesion</li>
+                <li> Sometimes print object requires help in adhering to plate</li>
+                <li>A Raft is a base of extruded material, the object is built on it</li>
+                <li>Brims allow some extra adhesion to the base of object</li>
+                <li>Skirts are used to clean/extrude material to test</li>
+              </ul>
+
+            </td>
+        </tr>
+      </table>
+
+      <h3 style="color:LightGray;">Supports</h3>
+
+      <table style="width:100%">
+        <tr>
+          <th>Example</th>
+          <th>Explaination</th>
+        </tr>
+          <tr>
+            <td><img src="3DPrintingGuide/supp.jpg" style="width:300px "></td>
+            <td>
+
+              <ul>
+                <li>Supports are used to aid in printing overhangs</li>
+                <li>Support make impossible prints possible</li>
+                <li>Supports are removed after printing</li>
+                <li>Sometimes, the positing of the print can help in reducing the need for support</li>
+              </ul>
+
+            </td>
+        </tr>
+      </table>
+
+      <p>After going through an overview of 3D printing, I will show a quick guide on how to import a file into Cura and convert it into Gcode.</p>
       <ul>
-        <li>A STL file</li>
-        <li>Ultimaker Cura</li>
-      </ul>
-
-      <p>STEP 1 to 4: Drawing the Outline</p>
-      <div class="slideshow-container">
-        <div class="mySlides1">
-          <img src="FusionGuide/Step1.png" style="width:100%">
-        </div>
-
-        <div class="mySlides1">
-          <img src="FusionGuide/Step2.png" style="width:100%">
-        </div>
-
-        <div class="mySlides1">
-          <img src="FusionGuide/Step3.png" style="width:100%">
-        </div>
-
-        <div class="mySlides1">
-          <img src="FusionGuide/Step4.png" style="width:100%">
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
-      </div>
-
-      <p>Step 1: Create a new file in Fusion 360 and select the XZ plane.</p>
-      <p>Step 2: In Sketch mode draw 2 lines which will act as your width (15mm) and height (50mm).</p>
-      <p>Step 3: Hover over to the Insert tab on the menu section and find the 'Canvas' option.</p>
-      <p>Step 4: Upload the Knight Chess Piece picture you have select and adjust it to fit into the lines you have drawn.</p>
-
-      <p>STEP 5 to 8: Sketching the Base and Revolving.</p>
-      <div class="slideshow-container">
-        <div class="mySlides2">
-          <img src="FusionGuide/Step5.png" style="width:100%">
-        </div>
-
-        <div class="mySlides2">
-          <img src="FusionGuide/Step6.png" style="width:100%">
-        </div>
-
-        <div class="mySlides2">
-          <img src="FusionGuide/Step7.png" style="width:100%">
-        </div>
-
-        <div class="mySlides2">
-          <img src="FusionGuide/Step8.png" style="width:100%">
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
-      </div>
-
-      <p>Step 5: On the same plane, using the Sketch Mode, draw half of the base. I use the Spline feature (highlighted in blue) to skectch the curvy part of the base.</p>
-      <p>Step 6: On the Solid tab, pick the Revolve option (Third from the left).</p>
-      <p>Step 7: Once chosen, you can pick the base that you have drawn.</p>
-      <p>Step 8: After you have finsihed Revolving it should look like this.</p>
-
-      <p>Once you are done with step 8. Head on over to the next page for Step 9 - 16. Alternatively, if you have already seen this guide before you can refer to the Tips and Tricks page.</p>
-      <ul>
-        <li><a href="3DPrinting1.html">Page 1</a></li>
-        <li><a href="3DPrinting2.html">Page 2</a></li>
-        <li><a href="3DPrinting3.html">Tips and Tricks</a></li>
+        <li><a href="A3DPrinting1.html">Overview</a></li>
+        <li><a href="A3DPrinting3.html">Guide</a></li>
       </ul>
 
       </div>
