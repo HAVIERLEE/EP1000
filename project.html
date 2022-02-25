@@ -486,8 +486,64 @@
 
 </ul>
 
-<p>Since I am using a rotary encoder, I would have to define which pins it uses so the arduino knows which pin to get the data from</p>
-<p>TBA...</p>
+<p>Since I am using a rotary encoder, I would have to define which pins it uses so the arduino knows which pin to get the data from.</p>
+<ul>
+  <li>SW PIN 4: SW is the button on the rotary encoder.</li>
+  <li>DT PIN 5: DT is the signal detected when you turn the encoder clockwise.</li>
+  <li>CLK PIN 6: CLK is the signal detected when you turn the encoder anti-clockwise.</li>
+</ul>
+
+<img src="Images/Code/Coding2.png" style="width:100% ">
+<p>The 'Debounce' part is used in my programe to prevent the rotary encoder from giving inconsistent results.</p>
+
+<table style="width:100%">
+<tr>
+  <th>Example</th>
+  <th>Explaination</th>
+</tr>
+
+  <tr>
+
+
+    <td><img src="Images/Code/Bounce.gif" style="width:300px "></td>
+
+    <td>As shown with this gif, without adding Debounce, the rotary encoder gives inconsistent results.</p>
+
+    </td>
+</tr>
+</table>
+<ul>
+  <li>In order to add debounce to all of the inputs of the Rotary Encoder, I would have to reapeat it 3 times.</li>
+  <li>The debounceDelay variable allows me to change the timing of debounce delay of the code making it easier to modify the value.</li>
+</ul>
+
+<img src="Images/Code/Coding3.png" style="width:100% ">
+<p>This is what the rest of the debounce code looks like and I would repeat it for the both DT and CLK.</p>
+
+<img src="Images/Code/Coding4.png" style="width:100% ">
+<p>This part of my code shows the different screens the LCD will display. To show the different state the launcher was in. 0 being the value when the launcher starts up.
+1 being the state where you control the X axis. 2 for the Y axis. 3 tells the servo pusher to push the dart. 4 retracts the servo to its original postition.</p>
+
+<img src="Images/Code/Coding5.png" style="width:100% ">
+<p>This is the part where the moving clockwise on the rotary encoder changes the angle. This part increases the angle. I set it to 10 and 170 as the servo motor has some issues going from 0 to 180.</p>
+
+<img src="Images/Code/Coding6.png" style="width:100% ">
+<p>This part is simliar to the perivous picture. However it decreases the angle instead.</p>
+
+<h4>Fabrication</h4>
+<p>While fabricating the different piece of the dart launcher, I decided to make some changes to the original design.</p>
+  <ul>
+    <li>I addded a "tray"</li>
+    <li>I decided not to laser cut the housing around the dart launcher</li>
+    <li>I had to increase the height of the magazine holder</li>
+  </ul>
+<h4>Intergration</h4>
+
+
+<h4>Reflection</h4>
+
+<h4>1 minute project video:</h4>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/rGpEYGN7Q2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
       </div>
     </div>
