@@ -235,7 +235,7 @@
           <h4>Design Sketch Conclusion:</h4>
           <p>In Conclusion, I will be using design 2. Although design 3 might be more appealing, the time constraint I have on this project means
           that I should try to go for a faster fabrication, since I will have to work on the code as well. Since design 2 is just a more ideal version
-          of design 1, I chose to use it.</p>
+          of design 1, I chose to use it. In addition, it was suggested that we make a mock up of our design using cardboard. However, due to a lack of time, I have deceided not to do it.</p>
 
           <h4>Creating a CAD MODEL</h4>
           <table style="width:100%">
@@ -448,15 +448,26 @@
 <td><img src="Images/Cad/DartLauncher.png" style="width:300px "></td>
 <td>
 
-  <p>In Conclusion, you should double check your orientation of your Cad model. Since I did not check,
-  my model has a slight error where the gun faces the user. </p>
+  <p>After finishing the gun, I reattach it to the base. In Conclusion, you should double check your orientation of your Cad model. Since I did not check,
+  my model has a slight error where the gun faces the user. The Cad model for these files can be found in my github site, along with the DXF files used for laser cutting.</p>
 
 </td>
 </tr>
 
 </table>
 <h4>Coding:</h4>
+<table style="width:100%">
+<tr>
+  <th>Example</th>
+  <th>Explaination</th>
+</tr>
+
+<tr>
+<td>
 <img src="Images/Code/Coding1.png" style="width:100% ">
+</td>
+
+<td>
 <p>To begin coding, I need to explain the different libraries I used and what purpose they serve.</p>
 <ul>
   <li>Servo.h</li>
@@ -492,14 +503,16 @@
   <li>DT PIN 5: DT is the signal detected when you turn the encoder clockwise.</li>
   <li>CLK PIN 6: CLK is the signal detected when you turn the encoder anti-clockwise.</li>
 </ul>
+</td>
+</tr>
 
-<img src="Images/Code/Coding2.png" style="width:100% ">
-<p>The 'Debounce' part is used in my programe to prevent the rotary encoder from giving inconsistent results.</p>
-
-<table style="width:100%">
 <tr>
-  <th>Example</th>
-  <th>Explaination</th>
+<td>
+<img src="Images/Code/Coding2.png" style="width:100% ">
+</td>
+<td>
+<p>The 'Debounce' part is used in my programe to prevent the rotary encoder from giving inconsistent results.</p>
+</td>
 </tr>
 
   <tr>
@@ -511,25 +524,36 @@
 
     </td>
 </tr>
-</table>
+
 <ul>
   <li>In order to add debounce to all of the inputs of the Rotary Encoder, I would have to reapeat it 3 times.</li>
   <li>The debounceDelay variable allows me to change the timing of debounce delay of the code making it easier to modify the value.</li>
 </ul>
 
-<img src="Images/Code/Coding3.png" style="width:100% ">
-<p>This is what the rest of the debounce code looks like and I would repeat it for the both DT and CLK.</p>
+<tr>
 
-<img src="Images/Code/Coding4.png" style="width:100% ">
-<p>This part of my code shows the different screens the LCD will display. To show the different state the launcher was in. 0 being the value when the launcher starts up.
-1 being the state where you control the X axis. 2 for the Y axis. 3 tells the servo pusher to push the dart. 4 retracts the servo to its original postition.</p>
+<td><img src="Images/Code/Coding3.png" style="width:300px "></td>
+<td><p>This is what the rest of the debounce code looks like and I would repeat it for the both DT and CLK.</p></td>
 
-<img src="Images/Code/Coding5.png" style="width:100% ">
-<p>This is the part where the moving clockwise on the rotary encoder changes the angle. This part increases the angle. I set it to 10 and 170 as the servo motor has some issues going from 0 to 180.</p>
 
-<img src="Images/Code/Coding6.png" style="width:100% ">
-<p>This part is simliar to the perivous picture. However it decreases the angle instead.</p>
+</tr>
 
+<tr>
+<td><img src="Images/Code/Coding4.png" style="width:300px  "></td>
+<td><p>This part of my code shows the different screens the LCD will display. To show the different state the launcher was in. 0 being the value when the launcher starts up.
+1 being the state where you control the X axis. 2 for the Y axis. 3 tells the servo pusher to push the dart. 4 retracts the servo to its original postition.</p></td>
+</tr>
+
+<tr>
+<td><img src="Images/Code/Coding5.png" style="width:300px "></td>
+<td><p>This is the part where the moving clockwise on the rotary encoder changes the angle. This part increases the angle. I set it to 10 and 170 as the servo motor has some issues going from 0 to 180.</p></td>
+</tr>
+
+<tr>
+<td><img src="Images/Code/Coding6.png" style="width:300px "></td>
+<td><p>This part is simliar to the perivous picture. However it decreases the angle instead.</p></td>
+</tr>
+</table>
 <h4>Fabrication</h4>
 <p>While fabricating the different piece of the dart launcher, I decided to make some changes to the original design.</p>
   <ul>
@@ -537,6 +561,7 @@
     <li>I decided not to laser cut the housing around the dart launcher</li>
     <li>I had to increase the height of the magazine holder</li>
   </ul>
+
 
   <table style="width:100%">
   <tr>
@@ -548,22 +573,22 @@
       <td><img src="Images/Fab/tray.png" style="width:300px "></td>
 
       <td>The Original idea for to add a tray was to allow me to get and easier access to my wiring and electronic compoents once I assmeble the base. Since I would
-        not have to remove the turret and gun just to check or modify the internals. Little did I know this small change would cost me a lot of time.
+        not have to remove the turret and gun just to check or modify the wiring. However, due to my ignorance, when I later began testing if all of the compoents fit, I realised the push button and LCD was preventing the base from closing as it was hitting the tray.
       </td>
   </tr>
 
   <tr>
-    <td><img src="Images/Fab/tray2.jpg" style="width:300px "></td>
+    <td><img src="Images/Fab/Tray2.jpg" style="width:300px "></td>
 
     <td>The main issue that stem when adding a tray is the dimension I used for it. I did not leave any tolerance. This meant that it was a perfect fit which caused
-      it to has trouble opening. I had to use a file and file down the tray to give me some wiggle room to properly use it. This did not solve the problem but it was a small patch to an issue.
+      it to has trouble opening. I had to use a file and file down the tray to give me some wiggle room to properly use it. This did not solve the problem but it was a small patch to an issue. I would later saw off the wall as it was getting in my way from wiring.
     </td>
 </tr>
 
 <tr>
   <td><img src="Images/Fab/newpusher.png" style="width:300px "></td>
 
-  <td>I decided not to fabricate the hosuing for the dart launcher as my preivous design for the pusher was off. It wasn't able to push it dart. So I had to
+  <td>I decided not to fabricate the hosuing for the dart launcher as my preivous design for the pusher was too big. It wasn't able to push it dart. So I had to
     extend it by an addtional 20mm for it to work. I also shaved off 4 mm from the top to allow the other darts in the magazine to feed in better. This resulted in the pusher being too big and I could
     either redesign the house and fabricate or just leave it without the housing. As I was running out of time I deceided not to create the housing as I felt that it would just only added to the weight of the launcher.
   </td>
@@ -578,7 +603,7 @@
 </tr>
 
 <tr>
-  <td><img src="Images/Fab/magEx2.jpg" style="width:300px "></td>
+  <td><img src="Images/Fab/MagEx2.jpg" style="width:300px "></td>
 
   <td>Since I was about 9mm off. I fabriacted 3 of them and glued them together before pasting them onto the top the of the magazine holder to extend the height.
   </td>
@@ -594,7 +619,7 @@
   </table>
 
 <h4>Intergration</h4>
-<p>Intergration became one of the hardest part of my project.</p>
+<p>Intergration became one of the hardest part of my project. This is due to my changes in design during fabrication affecting my previous design which I did not account for. This resulted in me spending my time to modify existing pieces to get it to work together.</p>
 
 <table style="width:100%">
 <tr>
@@ -610,6 +635,14 @@
       as I already screwed the ardiuno to the board and glued the breadboard. Needless to say, I got it done but I had used up too much of my time.
     </td>
 </tr>
+
+<tr>
+  <td><img src="Images/int/MotorRest.jpeg" style="width:300px "></td>
+
+  <td>Additionally, I had a wiring issue with the motors where they would reset the arduino when I acitvated them. In order to prevent this from happening, I would have to increase the current flowing through the circuit.
+  </td>
+</tr>
+
 <tr>
 <td><img src="Images/int/TestServo.gif" style="width:300px "></td>
 
@@ -642,10 +675,43 @@ the launcher.</td>
 attach it to the servo horn as the additional lenght will cause the ball bearing to not fix into the slot I made for it.</td>
 </tr>
 
+<tr>
+<td><img src="Images/int/sec.jpeg" style="width:300px "></td>
+
+<td>As I was cleaning up the hotglue from the servo motor, I made a realisation, that I could fit the dart launcher with a servo horn if I attach the screw hole of the sevo motor behind the wall.</td>
+</tr>
+
+<tr>
+<td><img src="Images/int/servo2horn.jpeg" style="width:300px "></td>
+
+<td>To implement this fix, I screwed the servo horn on to the servo to increase its grip. With the addition size of the screw, I fitted it into the mount and hotglue it together. The picture shows my final result.</td>
+</tr>
+
+<tr>
+<td><img src="Images/int/6.jpeg" style="width:300px "></td>
+
+<td>With everything attach together, it now works !</td>
+</tr>
+
+</table>
+
+<h4> Preview </h4>
+<table style="width:100%">
+<tr>
+  <th>Test Fire</th>
+  <th>Firing a full 6 shot magazine</th>
+</tr>
+
+  <tr>
+    <td><iframe width="560" height="315" src="https://www.youtube.com/embed/nVf0ZSj8GF0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+
+    <td><iframe width="560" height="315" src="https://www.youtube.com/embed/GNNfKkBNALs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </td>
+</tr>
 </table>
 
 <h4>Reflection</h4>
-  <td><img src="Images/int/Final.jpeg" style="width:600px "></td>
+  <img src="Images/int/Final.jpeg" style="width:600px ">
 <p>After finish assembling the nerf dart launcher I learnt I alot of valuable advice. The lack of proper time management was one of them, this was due to my indecision to modify my base to add a plate. The change cost my more time asI had to readjust the placement of all the componets.
   and when it all still didn't fit, I had to modify the tray itself which took up more time then I indeed and planned for. In summary:</p>
 <ul>
