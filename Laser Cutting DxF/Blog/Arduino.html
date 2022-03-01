@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ARDUINO</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheetblog.css" />
+  </head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>BLOG: ARDUINO</h1>
+    </div>
+    <div id="content">
+      <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="../about me.html">About Me</a>
+        <a href="../FablabSafety.html">Fablab Safety</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Blog
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../Blog/HTML.html">Web Development</a>
+          <a href="../Blog/vectorvsrastor.html">Vector Vs Raster</a>
+          <a href="htmlvscss.html">HTML and CSS</a>
+          <a href="MusicBox.html">Creating a Music Box</a>
+          <a href="Arduino.html">Arduino Test Log</a>
+          <a href="Printing1.html">3D Printing Attempts</a>
+        </div>
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Guide
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../Lessons/3DPrinting1.html">Fusion360: Knight Piece</a>
+          <a href="../Lessons/A3DPrinting1.html">3D Printing</a>
+          <a href="../Lessons/Vector.html">Vector</a>
+          <a href="../Lessons/Rastor.html">Rastor</a>
+        </div>
+        </div>
+        <a href="../tooltable.html">Tool Table</a>
+        <a href="../project.html">Final Project</a>
+      </div>
+
+      <div id="main">
+        <div id="aaa">
+          <h2 style="color:LightGray;">Introduction</h2>
+      <p>This is my Arduino Test Log. What is it purpose? To document my practise of using the Arduino board and thinkcad.
+      </p>
+
+      <p>A quick info dump about Arduino: An Arduino Embedded System is made of both software and hardware. It uses Software Tool such as an Intergrated Development System (IDE), Arduino progarmming language (Based on Processing), Development & Debugging Tools and Software libraries.
+        It has Hardware such as a ATmel processor boards (and others), Shields which are add on modules, Sensors, Actuators and peripherals. It is also an Open Source Platform which means anyone and everyone can use it, which also means it is easier to get help thorugh online fourms and such.
+      </p>
+
+      <p>Why do I use it?: It is Open Source. Thus I would be able to get help easily and there are tons of libraries made for it, which means if I need a function like to control a stepper motor as an example, I can look up a library that has premade code to control one. Saving me time.
+      It is also inexpensive, lots of clones, 3rd party manufacturers making it an ideal learning / teaching material due to how easy it is to get. It also has a Simple, clear programming environment using GUI which is pretty good. Not to mention that it is also Cross-platform (Windows, MacOSx, Linux).
+    Although I never found it useful, it means you can use it no matter what computer you are using which means it is accessible to everyone. </p>
+
+    <h3 style="color:LightGray;">Getting Started</h3>
+
+    <table style="width:100%">
+      <tr>
+        <th>Example</th>
+        <th></th>
+      </tr>
+        <tr>
+          <td><img src="Arduino/arduino.jpg" style="width:100%"></td>
+
+          <td>
+
+            <ul>
+              <p>To get started on coding an arduino, you will of course need an arduino. My school provided us with an Arduino Uno to use, but you can use similar arduino boards. The sceond most impoartant thing you will need is a breadboard. Although you can make these circuits without a arduino board,
+                a breadboard will certainly help with the standardization. Lastly you will need the componets such as wires, LEDs, resistors and push button switch.
+              </p>
+            </ul>
+
+          </td>
+      </tr>
+    </table>
+
+    <h3 style="color:LightGray;">Additional Help</h3>
+    <p>I will be using thinkercad to simulate my code first. This is help save time as I can troubleshoot the code in an online software first before making.
+    </p>
+
+    <h3 style="color:LightGray;">Q1: Connect a LED and a current limiting resistor and blink LED in different patterns</h3>
+
+    <table style="width:100%">
+      <tr>
+        <th>Example</th>
+        <th>Comments</th>
+      </tr>
+        <tr>
+          <td><img src="Arduino/A1.png" style="width:100%"></td>
+
+          <td>
+
+            <ul>
+              <p>This first part is pretty easy. I assign the LED output pin to pin 8 and made it blink in 1 sec (1000ms) inervals.
+              </p>
+            </ul>
+
+          </td>
+      </tr>
+
+      <tr>
+        <td><img src="Arduino/A1.gif" style="width:100%"></td>
+
+        <td>
+
+          <ul>
+            <p>When wiring this circuit, I forgot to attach the breadboard to 5v and Gnd. Apart from that careless mistake nothing went wrong.
+            </p>
+          </ul>
+
+        </td>
+    </tr>
+    </table>
+
+    <h3 style="color:LightGray;">Q2 Control 3 or more LEDs</h3>
+
+        <table style="width:100%">
+          <tr>
+            <th>Example</th>
+            <th>Comments</th>
+          </tr>
+            <tr>
+              <td><img src="Arduino/A2.png" style="width:100%"></td>
+
+              <td>
+
+                <ul>
+                  <p>I added a push button switch to pin 6. I noticed I in thinkercad I forgot to wire it to 5V and so I fixed it. I added a resistor between the arduino and gnd. This resistor is known as a 'pulldown' resistor it gives an arduino pin a weak gnd connection so the pin is never 'floating'. Since
+                    electricity takes the path of least resistance so when the button is pressed, the pin will sense the connection to power more strongly and ignore the weak connection to gnd. Without this resistor, the floating could be affect by things like static electricity and give unreliable readings.
+                  </p>
+                </ul>
+
+              </td>
+          </tr>
+
+          <tr>
+            <td><img src="Arduino/A2.gif" style="width:100%"></td>
+
+            <td>
+
+              <ul>
+                <p>2 issues cropped up while making this circuit. Firstly the pin the yellow LED was attach to did not light up. After troubleshooting, I found out that pin 6 might be damaged. Secondly, the resistor used for the yellow led was stronger than the ones used for the red and green one. Thus the
+                  yellow led appeared dimmer. To fix this I removed the resistor connecting the yellow led.
+                </p>
+              </ul>
+
+            </td>
+        </tr>
+        </table>
+
+    <h3 style="color:LightGray;">Q3 Adding a switch to flashing lights</h3>
+
+        <table style="width:100%">
+          <tr>
+            <th>Example</th>
+            <th>Comments</th>
+          </tr>
+            <tr>
+              <td><img src="Arduino/A3.png" style="width:100%"></td>
+
+              <td>
+
+                <ul>
+                  <p>I had zero issues wiring this circuit in thinkercad.
+                  </p>
+                </ul>
+
+              </td>
+          </tr>
+
+          <tr>
+            <td><img src="Arduino/A3.gif" style="width:100%"></td>
+
+            <td>
+
+              <ul>
+                <p>I forogt to record the video used for this circuit so I recreated it with the next one and just wired the switch to turn them on and off.
+                </p>
+              </ul>
+
+            </td>
+        </tr>
+        </table>
+
+
+    <h3 style="color:LightGray;">Q4 Using a switch to control the type of light-up and flashing of LEDs</h3>
+
+        <table style="width:100%">
+          <tr>
+            <th>Example</th>
+            <th>Comments</th>
+          </tr>
+            <tr>
+              <td><img src="Arduino/A4.png" style="width:100%"></td>
+
+              <td>
+
+                <ul>
+                  <p>To make the LEDs light up with different pushes of the button, I created a 'counter' which counts up to 5 before reseting. Each time it counts up, I will tell it to turn on a different LED. This can be repeated infiniantly because the counter resets at the end.
+                  </p>
+                </ul>
+
+              </td>
+          </tr>
+
+          <tr>
+            <td><img src="Arduino/A4.gif" style="width:100%"></td>
+
+            <td>
+
+              <ul>
+                <p>Had an issue with my computer not being able to dectect the port of the arduino. I had to manually change in the software. Tools > Port > Port 3 (Generally what most computers used when conneting to an arduino.)
+                </p>
+              </ul>
+
+            </td>
+        </tr>
+        </table>
+
+
+    <h3 style="color:LightGray;">Q5 Modify program in Q4 to flash LEDs</h3>
+
+        <table style="width:100%">
+          <tr>
+            <th>Example</th>
+            <th>Comments</th>
+          </tr>
+            <tr>
+              <td><img src="Arduino/A5.gif" style="width:100%"></td>
+
+              <td>
+
+                <ul>
+                  <p>I added a delay to all of the leds when they light up so they will 'flash'.
+                  </p>
+                </ul>
+
+              </td>
+          </tr>
+        </table>
+
+
+    <h3 style="color:LightGray;">555 Assignment</h3>
+    <p>This circuit is producing a square wave using the 555 ic chip to wire up a 555 timer circuit.</p>
+    <p>Using a Sine Wave can cause fluctuations in voltage being provided which will result in motor control to be inaccurate.</p>
+    <p>An Oscillscope is used to display the voltage wave form.</p>
+    <p>By adjusting the capcaitor values, the rate of blinks the LED makes can be adjusted,</p>
+    <img src="Arduino/A555.png" style="width:100%">
+    <img src="Arduino/A555.gif" style="width:100%">
+
+
+
+    <div id="footer">
+        Copyright &copy; 2021 Javier Lee.
+    </div>
+  </div>
+
+
+ </div>
+ <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex[no]-1].style.display = "block";
+}
+</script>
+</body>
+</html>

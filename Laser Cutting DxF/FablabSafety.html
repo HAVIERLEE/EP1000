@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FABLAB SAFETY</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheet.css" />
+  </head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>FABLAB SAFETY</h1>
+    </div>
+    <div id="content">
+      <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about me.html">About Me</a>
+        <a href="FablabSafety.html">Fablab Safety</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Blog
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="Blog/HTML.html">Web Development</a>
+          <a href="Blog/vectorvsrastor.html">Vector Vs Raster</a>
+          <a href="Blog/htmlvscss.html">HTML and CSS</a>
+          <a href="Blog/MusicBox.html">Creating a Music Box</a>
+          <a href="Blog/Arduino.html">Arduino Test Log</a>
+          <a href="Blog/Printing1.html">3D Printing Attempts</a>
+        </div>
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Guide
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="Lessons/3DPrinting1.html">Fusion360: Knight Piece</a>
+          <a href="Lessons/A3DPrinting1.html">3D Printing</a>
+          <a href="Lessons/Vector.html">Vector</a>
+          <a href="Lessons/Rastor.html">Raster</a>
+        </div>
+        </div>
+        <a href="tooltable.html">Tool Table</a>
+        <a href="project.html">Final Project</a>
+      </div>
+
+
+      <div id="main">
+        <div id="aaa">
+          <h2>Fablab Safety</h2>
+          <p>In case of any emergency, you should contact the following numbers</p>
+          <ul>
+            <li>995 for Ambulance & SCD.F</li>
+            <li>6772-1234 for SP Emergency Hotline</li>
+            <li>999 for Police</li>
+          </ul>
+
+          <h3>Introduction to the Basic Safety Rule</h3>
+          <p>Safety should be everyone's number one prioity. In this section I will going through the Fablab Safety Rules.</p>
+              <p>1. Wear proper attire while in the Fablab. Things to take note:</p>
+              <ul>
+                <li>Wear Long Pants & Covered Shoes</li>
+                <li>No long sleeved shirts, loose attire, loose items</li>
+                <li>Long Hair must be tied up</li>
+              </ul>
+              <p>2. Always report all injuries no matter how minor to the staff in charge</p>
+              <p>3. Do not operate any machinery unless you are trained and certified in its usage and are given permission to do so.</p>
+              <p>4. Emergency Procedures:</p>
+              <ul>
+                <li>If the alarm sounds, stop work immediatly and wait for staff in charge.</li>
+                <li>If a fire starts in the lab inform everyone immediatly and leave the lab.</li>
+                <li>When reporting emergencies please seek the help of the staff.</li>
+              </ul>
+              <p>5. You must keep the workplace clean, neat and orederly after use:</p>
+              <ul>
+                <li>Clean up debris and chips.</li>
+                <li>Returning tools to their designated storage areas</li>
+                <li>Make sure to recycle any leftover materials.</li>
+              </ul>
+              <p>5. Report all unsafe conditions or acts to the staff in charge.</p>
+              <p>6. Wear Personal Protective Equipment when operating any equipment.</p>
+              <p>7. Follow machine operating procedures.</p>
+
+              <h3>Safety Hazard Symbols</h3>
+              <td><img width="600" height="400" src="Images/Symbols.jpg" alt="Look at me!"></td>
+              <p>These are the safety harzard symbols commonly seem in the Fablab.</p>
+
+              <h3>Safety Hazard Symbols</h3>
+              <td><img width="600" height="400" src="Images/Warning.png" alt="Warning Cards"></td>
+              <p>The Picture shows are the Warning Placards. They are usally placed on the equipment, they denote the danger levels of using the machine as well what you are expected to war and harzards to take note of. They also come with a set of instructions for you to follow as well. So if you mess something up it is kinda on you at this rate for not reading. ;P</p>
+          <p>REMINDER: Before you can access the Fablab, you must pass a compulsory safety quiz. It can be accessed via Blackboard. My Community> Fablab> Fablab Quiz</p>
+        </div>
+      </div>
+    </div>
+    <div id="footer">
+        Copyright &copy; 2021 Javier Lee.
+    </div>
+
+
+ </div>
+ <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+</body>
+</html>

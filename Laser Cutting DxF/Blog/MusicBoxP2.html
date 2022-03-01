@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheetblog.css" />
+  </head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>BLOG: Making a Music Box for my Dad's Birthday</h1>
+    </div>
+    <div id="content">
+      <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="../about me.html">About Me</a>
+        <a href="../FablabSafety.html">Fablab Safety</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Blog
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../Blog/HTML.html">Web Development</a>
+          <a href="../Blog/vectorvsrastor.html">Vector Vs Raster</a>
+          <a href="../Blog/htmlvscss.html">HTML and CSS</a>
+          <a href="MusicBox.html">Creating a Music Box</a>
+          <a href="Arduino.html">Arduino Test Log</a>
+          <a href="Printing1.html">3D Printing Attempts</a>
+        </div>
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Guide
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../Lessons/3DPrinting1.html">Fusion360: Knight Piece</a>
+          <a href="../Lessons/A3DPrinting1.html">3D Printing</a>
+          <a href="../Lessons/Vector.html">Vector</a>
+          <a href="../Lessons/Rastor.html">Rastor</a>
+        </div>
+        </div>
+        <a href="../tooltable.html">Tool Table</a>
+        <a href="../project.html">Final Project</a>
+      </div>
+
+      <div id="main">
+        <div id="aaa">
+          <h2 style="color:LightGray;">Making a Music Box for my Dad's Birthday</h2>
+
+      <p>PHASE 2. Going from Fusion 360 to Inkscape</p>
+      <div class="slideshow-container">
+        <div class="mySlides1">
+          <img src="MusicBox/Inkscape1.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="MusicBox/Inkscape2.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="MusicBox/MusicBoxInk.png" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+      </div>
+
+      <p>To convert my CAD model from Fusion 360 to Inkscape, I have to select a side and create a sketch using the existing shape.
+        Once a new sketch with the shape has been created, I can export it as a DXF (Drawing) file. I can use Inkscape to open the DXF file
+        and repeat that a few more times until I have all of the sides made. While in Inkscape I can change the outline of the drawing to the
+        colour red. This is because, for the settings used in laser cutting software, Red Hairline lines tells the Laser Cutter to cut out that
+        line. While Black Solids like the "Happy Birthday Dad" acts as a shape for engraving the message.
+     </p>
+
+      <div class="slideshow-container">
+        <div class="mySlides2">
+          <img src="MusicBox/Penguin.png" style="width:100%">
+        </div>
+
+        <div class="mySlides2">
+          <img src="MusicBox/MusicBoxInkPen.png" style="width:100%">
+        </div>
+
+        <div class="mySlides2">
+          <img src="MusicBox/CorelDrawPB.jpg" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+      </div>
+
+      <p>My father loves Penguins and so do I. So for his birthday I created a Penguin Vector Drawing similiar to the one I did for
+      my <a href="../Lessons/Vector.html">Vector Drawing Guide.</a> To import this image into the same drawing as my Music Box, I just need to
+      go to the top right tab named "file" and use the "import" tab and select the penguin SVG file and merge the two.</p>
+
+      <p>Unfortunately, while importing the DXF file into CorelDraw, I made a mistake while converting it and can only open
+        the Penguin Vector Drawing file and the Music Box wihtout the Penguin Drawing file. I had to merge both of them
+        together again in corelDRAW and convert the outlines. This might be due to the fact that while in Inkscape I saved the
+      merged drawing as an SVG 2014 file instead or a SVG 2012. I have yet to look into the cause but this was only a slight hinderance. </p>
+
+
+
+      <p>As of Phase 2, with the file in CorelDRAW I can now upload it on to the Laser Cutter so I can cut it out.</p>
+      <ul>
+        <li><a href="MusicBox.html">PHASE 1</a></li>
+        <li><a href="MusicBoxP2.html">PHASE 2</a></li>
+        <li><a href="MusicBoxP3.html">PHASE 3</a></li>
+      </ul>
+
+      </div>
+    </div>
+    <div id="footer">
+        Copyright &copy; 2021 Javier Lee.
+    </div>
+  </div>
+
+
+ </div>
+ <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex[no]-1].style.display = "block";
+}
+</script>
+</body>
+</html>

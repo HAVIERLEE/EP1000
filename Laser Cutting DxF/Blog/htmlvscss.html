@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Development</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheetblog.css" />
+  </head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>BLOG: The Development of my Website.</h1>
+    </div>
+    <div id="content">
+      <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="../about me.html">About Me</a>
+        <a href="../FablabSafety.html">Fablab Safety</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Blog
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../Blog/HTML.html">Web Development</a>
+          <a href="../Blog/vectorvsrastor.html">Vector Vs Raster</a>
+          <a href="../Blog/htmlvscss.html">HTML and CSS</a>
+          <a href="MusicBox.html">Creating a Music Box</a>
+          <a href="Arduino.html">Arduino Test Log</a>
+          <a href="Printing1.html">3D Printing Attempts</a>
+        </div>
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Guide
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../Lessons/3DPrinting1.html">Fusion360: Knight Piece</a>
+          <a href="../Lessons/A3DPrinting1.html">3D Printing</a>
+          <a href="../Lessons/Vector.html">Vector</a>
+          <a href="../Lessons/Rastor.html">Rastor</a>
+        </div>
+        </div>
+        <a href="../tooltable.html">Tool Table</a>
+        <a href="../project.html">Final Project</a>
+      </div>
+
+      <div id="main">
+        <div id="aaa">
+          <h2 style="color:LightGray;">Introduction</h2>
+      <p>This is a small summary about the HTML and CSS.
+      </p>
+
+      <h3 style="color:LightGray;">What is HTML?</h3>
+      <p>The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser.
+        It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.It acts at the main
+      body and content for your website.</p>
+      <img src="htmlandcss/html.png" style="width:100%">
+
+      <h3 style="color:LightGray;">What is CSS?</h3>
+      <p>Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.
+        Both CSS and HTML can display colours for their headers, backgrounds, etc.
+        However, it is more efficent to create a CSS file and add the colours, headers, etc to all of your HTML files. So you would not have to do it for every file when
+        you make a new one. Addtionally, it will allow you to standardize all of your HTML files</p>
+        <img src="htmlandcss/css.png" style="width:100%">
+
+      <h3 style="color:LightGray;">SUMMARY</h3>
+      <p> HTML acts as the main body and content for your website. While CSS acts as a decoration for it. </p>
+
+
+
+    <div id="footer">
+        Copyright &copy; 2021 Javier Lee.
+    </div>
+  </div>
+
+
+ </div>
+ <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex[no]-1].style.display = "block";
+}
+</script>
+</body>
+</html>

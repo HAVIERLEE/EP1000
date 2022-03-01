@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HORUS OWNS THIS DOMAIN</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheetLessons.css" />
+  </head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>GUIDE: FUSION 360 </h1>
+    </div>
+    <div id="content">
+      <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="../about me.html">About Me</a>
+        <a href="../FablabSafety.html">Fablab Safety</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Blog
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../Blog/HTML.html">Web Development</a>
+          <a href="../Blog/vectorvsrastor.html">Vector Vs Raster</a>
+          <a href="../Blog/htmlvscss.html">HTML and CSS</a>
+          <a href="../Blog/MusicBox.html">Creating a Music Box</a>
+          <a href="../Blog/Arduino.html">Arduino Test Log</a>
+          <a href="../Blog/Printing1.html">3D Printing Attempts</a>
+        </div>
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Guide
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="3DPrinting1.html">Fusion360: Knight Piece</a>
+          <a href="A3DPrinting1.html">3D Printing</a>
+          <a href="Vector.html">Vector</a>
+          <a href="Rastor.html">Rastors</a>
+        </div>
+        </div>
+        <a href="../tooltable.html">Tool Table</a>
+        <a href="../project.html">Final Project</a>
+      </div>
+
+      <div id="main">
+        <div id="aaa">
+          <h2 style="color:LightGray;">HOW TO DRAW A KNIGHT CHESS PIECE IN FUSION 360</h2>
+
+      <p>Tip 1: Filleting the edges for a more smooth look</p>
+      <div class="slideshow-container">
+        <div class="mySlides">
+          <img src="FusionGuide/Tip1.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <img src="FusionGuide/Tip2.png" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <img src="FusionGuide/Tip3.png" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+      </div>
+
+      <p>Step 1: Second on the left of the modify tab, you will see the Fillet function. Click on it.</p>
+      <p>Step 2: Once you have chosen it, select the edges of the Kngiht pieces. Once you are satifised with how it looks you can hit enter to fillet it. Note that the radius of your fillet might effect how it looks. If it is too large, it may remove chunks of your workpiece.</p>
+      <p>Step 3: This is how mine turned out after I fillet it.</p>
+
+      <p>If you are interested in looking at my model, I have linked a preview of it below.</p>
+      <iframe src="https://ichat1065.autodesk360.com/shares/public/SH9285eQTcf875d3c53981bfd5c30b39f643?mode=embed" width="1024" height="768" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+
+      <ul>
+        <li><a href="3DPrinting1.html">Page 1</a></li>
+        <li><a href="3DPrinting2.html">Page 2</a></li>
+        <li><a href="3DPrinting3.html">Tips and Tricks</a></li>
+      </ul>
+      </div>
+    </div>
+    <div id="footer">
+        Copyright &copy; 2021 Javier Lee.
+    </div>
+  </div>
+
+
+ </div>
+ <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>

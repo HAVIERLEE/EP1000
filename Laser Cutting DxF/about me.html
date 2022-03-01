@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HORUS OWNS THIS DOMAIN</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheet.css" />
+  </head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>ABOUT THE AUTHOR</h1>
+    </div>
+    <div id="content">
+      <div class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about me.html">About Me</a>
+        <a href="FablabSafety.html">Fablab Safety</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Blog
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="Blog/HTML.html">Web Development</a>
+          <a href="Blog/vectorvsrastor.html">Vector Vs Raster</a>
+          <a href="Blog/htmlvscss.html">HTML and CSS</a>
+          <a href="Blog/MusicBox.html">Creating a Music Box</a>
+          <a href="Blog/Arduino.html">Arduino Test Log</a>
+          <a href="Blog/Printing1.html">3D Printing Attempts</a>
+        </div>
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Guide
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="Lessons/3DPrinting1.html">Fusion360: Knight Piece</a>
+          <a href="Lessons/A3DPrinting1.html">3D Printing</a>
+          <a href="Lessons/Vector.html">Vector</a>
+          <a href="Lessons/Rastor.html">Raster</a>
+        </div>
+        </div>
+        <a href="tooltable.html">Tool Table</a>
+        <a href="project.html">Final Project</a>
+      </div>
+
+      <div id="main">
+        <div id="aaa">
+          <h2 style="color:LightGray;">Who am I ?</h2>
+      <td><img width="900" height="400" src="Images/me2.png" alt="Why are we still here..."></td>
+      <p>My name is Javier Lee. I'm 18 years old.</p>
+      <p>My house is in the northeast section of Singapore, where all the HDBs are, and I am not married.</p>
+      <p>I am student in Singapore Polytechnic, and I get home every day by 8 PM at the latest.</p>
+      <p>I don't smoke, but I occasionally drink. I'm in bed by 12 AM, and make sure I get seven hours of sleep, this sentence is a joke.</p>
+      <p>After having a glass of warm milk and doing about one minutes of stretche before going to bed, I usually have no problems sleeping until morning.</p>
+      <p>Just like a middle aged man, I wake up with fatigue and stress in the morning.</p>
+      <p>I was told there were no issues at my last check-up. I'm trying to explain that I'm a person who wishes to live a very quiet life, this sentence is also a joke.</p>
+      <p>I take care not to trouble myself with any enemies, like winning and losing, that would cause me to lose sleep at night.</p>
+      <p>That is how I deal with society<del> we live in a society</del>, and I know that is what brings me happiness. Although, if I were to fight I wouldn't lose to anyone.</p>
+      </div>
+    </div>
+    </div>
+    <div id="footer">
+        Copyright &copy; 2021 Javier Lee.
+    </div>
+
+
+ </div>
+ <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+</body>
+</html>

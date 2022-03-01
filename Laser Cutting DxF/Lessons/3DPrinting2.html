@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HORUS OWNS THIS DOMAIN</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheetLessons.css" />
+  </head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>GUIDE: FUSION 360 </h1>
+    </div>
+    <div id="content">
+      <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="../about me.html">About Me</a>
+        <a href="../FablabSafety.html">Fablab Safety</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Blog
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../Blog/HTML.html">Web Development</a>
+          <a href="../Blog/vectorvsrastor.html">Vector Vs Raster</a>
+          <a href="../Blog/htmlvscss.html">HTML and CSS</a>
+          <a href="../Blog/MusicBox.html">Creating a Music Box</a>
+          <a href="../Blog/Arduino.html">Arduino Test Log</a>
+          <a href="../Blog/Printing1.html">3D Printing Attempts</a>
+        </div>
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Guide
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="3DPrinting1.html">Fusion360: Knight Piece</a>
+          <a href="A3DPrinting1.html">3D Printing</a>
+          <a href="Vector.html">Vector</a>
+          <a href="Rastor.html">Rastors</a>
+        </div>
+        </div>
+        <a href="../tooltable.html">Tool Table</a>
+        <a href="../project.html">Final Project</a>
+      </div>
+
+      <div id="main">
+        <div id="aaa">
+          <h2 style="color:LightGray;">HOW TO DRAW A KNIGHT CHESS PIECE IN FUSION 360</h2>
+
+      <p>STEP 9 to 12: Sketching the Base and Revolving.</p>
+      <div class="slideshow-container">
+        <div class="mySlides1">
+          <img src="FusionGuide/Step9.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="FusionGuide/Step10.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="FusionGuide/Step11.png" style="width:100%">
+        </div>
+
+        <div class="mySlides1">
+          <img src="FusionGuide/Step12.png" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+      </div>
+
+      <p>Step 9: On the XZ plane, outline the shape of the horse including its mane. I also use the Spline feature for this.</p>
+      <p>Step 10: Once drawn, hover oever to the second icon from the left which is the extrude feature and click on the outline you have drawn. Select symmetric for your direction and distance 1mm.</p>
+      <p>Step 11: Here you can see how the end result should look like. To add the ears other features, we copy the online again but we do not add the mane.</p>
+      <p>Step 12: Once drawn, extude it again, this time use the 'one way' for direction and 1mm for the distance.</p>
+
+      <p>STEP 13 to 16: Sketching the Base and Revolving.</p>
+      <div class="slideshow-container">
+        <div class="mySlides2">
+          <img src="FusionGuide/Step13.png" style="width:100%">
+        </div>
+
+        <div class="mySlides2">
+          <img src="FusionGuide/Step14.png" style="width:100%">
+        </div>
+
+        <div class="mySlides2">
+          <img src="FusionGuide/Step15.png" style="width:100%">
+        </div>
+
+        <div class="mySlides2">
+          <img src="FusionGuide/Step16.png" style="width:100%">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+      </div>
+
+      <p>Step 13: On the XZ plane, outline the ear shape of the knight and repeat the extude.</p>
+      <p>Step 14: The chess knight should look like this after extuding. Next we are going to use the mirror function.</p>
+      <p>Step 15: Under the create tab near the bottom you should see the mirror option.</p>
+      <p>Step 16: Select the every Bodies that you have draw by going to the bodies folder and clicking the dropdown. Then selcet your Mirror plane as the other side of the chess piece. They should prewview how it looks like.</p>
+
+      <img src="FusionGuide/Step16Done.png" style="width:100%">
+      <p>Once you are done with step 16, this is how it should look like. Alternatively, if you are looking to add little flare to the Chess piece check out the next page.</p>
+      <ul>
+        <li><a href="3DPrinting1.html">Page 1</a></li>
+        <li><a href="3DPrinting2.html">Page 2</a></li>
+        <li><a href="3DPrinting3.html">Tips and Tricks</a></li>
+      </ul>
+
+      </div>
+    </div>
+    <div id="footer">
+        Copyright &copy; 2021 Javier Lee.
+    </div>
+  </div>
+
+
+ </div>
+ <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex[no]-1].style.display = "block";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HORUS OWNS THIS DOMAIN</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheetLessons.css" />
+  </head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>GUIDE: 3D PRINT </h1>
+    </div>
+    <div id="content">
+      <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="../about me.html">About Me</a>
+        <a href="../FablabSafety.html">Fablab Safety</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Blog
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../Blog/HTML.html">Web Development</a>
+          <a href="../Blog/vectorvsrastor.html">Vector Vs Raster</a>
+          <a href="../Blog/htmlvscss.html">HTML and CSS</a>
+          <a href="../Blog/MusicBox.html">Creating a Music Box</a>
+          <a href="../Blog/Arduino.html">Arduino Test Log</a>
+          <a href="../Blog/Printing1.html">3D Printing Attempts</a>
+        </div>
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Guide
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="3DPrinting1.html">Fusion360: Knight Piece</a>
+          <a href="A3DPrinting1.html">3D Printing</a>
+          <a href="Vector.html">Vector</a>
+          <a href="Rastor.html">Rastors</a>
+        </div>
+        </div>
+        <a href="../tooltable.html">Tool Table</a>
+        <a href="../project.html">Final Project</a>
+      </div>
+
+      <div id="main">
+        <div id="aaa">
+          <h2 style="color:LightGray;">Overview on 3D Printing</h2>
+      <p>In this guide, I am going to do a quick overview on 3D printing and show you prep an STL file for 3D printing using Ultimaker Cura.</p>
+      <h3 style="color:LightGray;">What is 3D printing?</h3>
+
+      <table style="width:100%">
+        <tr>
+          <th>Additive</th>
+          <th>Subtractive</th>
+        </tr>
+          <tr>
+            <td><img src="3DPrintingGuide/fabsub2.jpg" style="width:600px "></td>
+            <td><img src="3DPrintingGuide/fabsub.jpg" style="width:550px"></td>
+        </tr>
+      </table>
+
+      <p>3D printing also known as additive manufacturing is a process of creating a solid object from a digital drawing. The creation of a 3D printed object is made through the
+      use of the additive processes. In an additive process an object is creaeted by laying down successive layers of material until the object is created. Each of these layers can be seen as a thinly sliced cross-section of the object.
+      This is contrast to subtractive manufacturing where the material is removed from a solid block to create the object. 3D printing enables you to produce complex shapes using less material than traditional manufacturing methods.</p>
+
+      <h3 style="color:LightGray;">What are the benefits of 3D printing?</h3>
+
+      <p>One of the main advantage of 3D printing is that anyone who has the necessary skill and equipment can manufacture anything they want. It can be ideal for rapid prototypinng helping with visualisation. The only disadvantage
+      is that it is very slow. The material may not have the strength.</p>
+
+      <h3 style="color:LightGray;">This is the Workflow of how 3D printers work</h3>
+
+      <p>Fusion 360 file > .STL file > Cura (A Slicer) >  Gcode (Machine Code basically insturctions for a 3D printer to understand) >  3D printer</p>
+
+      <ol>
+        <li>Create a 3D Model of the object using CAD</li>
+        <li>Extract the 3D Model representation (.STL, .OBJ, .3MF)</li>
+        <li>Use a slicer (e.g. CURA) to slice the model into layers.</li>
+        <li>Extract each layer into a machine readable file (.GCODE)</li>
+        <li>. Send to the 3D Printer for fabrication</li>
+      </ol>
+
+      <h3 style="color:LightGray;">Layer Height</h3>
+
+      <table style="width:100%">
+        <tr>
+          <th>Example</th>
+          <th>Explaination</th>
+        </tr>
+          <tr>
+            <td><img src="3DPrintingGuide/layH.png" style="width:100%"></td>
+            <td>
+
+              <ul>
+                <li>The picture shows the height of each printed layer</li>
+                <li>The Thinner layers give finer prints, however, this will result in a slower print time</li>
+                <li>Range: 0.1 ~ 0.4 mm (½ nozzle diameter)</li>
+                <li>Affects resolution, smoothness and time taken to print.</li>
+              </ul>
+
+            </td>
+        </tr>
+      </table>
+
+      <h3 style="color:LightGray;">Wall Thickness</h3>
+
+      <table style="width:100%">
+        <tr>
+          <th>Example</th>
+          <th>Explaination</th>
+        </tr>
+          <tr>
+            <td><img src="3DPrintingGuide/WallThick.png" style="width:300px "></td>
+            <td>
+
+              <ul>
+                <li>Wall Thickness creates the number of strands to make up the thickness of the wall.</li>
+                <li>This affects time and strength of print</li>
+                <li>Example: Wall thickness = 3mm using 0.2 layer</li>
+                <li>Inner wall : 0.8 mm</li>
+                <li>Outer wall : 0.8 mm</li>
+                <li>Wall thickness: 1.4 mm (7 passes of the nozzle)</li>
+              </ul>
+
+            </td>
+        </tr>
+      </table>
+
+      <h3 style="color:LightGray;">Infill Percentages</h3>
+
+      <table style="width:100%">
+        <tr>
+          <th>Example</th>
+          <th>Explaination</th>
+        </tr>
+          <tr>
+            <td><img src="3DPrintingGuide/Infillp.jpg" style="width:300px "></td>
+            <td>
+
+              <ul>
+                <li>Controls the amount of fill in the internal cavities.</li>
+                <li>Higher percentages take longer time, but higher strength</li>
+                <li>Example: Wall thickness = 3mm using 0.2 layer</li>
+                <li>Can specify the type of infill pattern structure (lines, triangles)</li>
+                <li>Typical infill: 10 ~ 20%</li>
+              </ul>
+
+            </td>
+        </tr>
+      </table>
+
+      <h3 style="color:LightGray;">Infill Percentages</h3>
+
+      <table style="width:100%">
+        <tr>
+          <th>Example</th>
+          <th>Explaination</th>
+        </tr>
+          <tr>
+            <td><img src="3DPrintingGuide/Brid.png" style="width:300px "></td>
+            <td>
+
+              <ul>
+                <li>Prints between 2 points that have no connection to each other.</li>
+                <li>3D Printer prints the base layer, then the vertical structures.</li>
+                <li>Horizontal structures have no supports other than at the end.</li>
+                <li>There is a max distance you can bridge without stringing</li>
+              </ul>
+
+            </td>
+        </tr>
+      </table>
+
+      <h3 style="color:LightGray;">Overhang limits</h3>
+
+      <table style="width:100%">
+        <tr>
+          <th>Example</th>
+          <th>Explaination</th>
+        </tr>
+          <tr>
+            <td><img src="3DPrintingGuide/Overh.png" style="width:300px "></td>
+            <td>
+
+              <ul>
+                <li>Most printers can handle an overhang of 45°.</li>
+                <li>There is a limit where there is insufficient support</li>
+                <li>All 3D printers cannot print on air</li>
+                <li>It is recommended that you do a test print to determine your overhang angle</li>
+              </ul>
+
+            </td>
+        </tr>
+      </table>
+
+      <h3 style="color:LightGray;">Platform adhesion</h3>
+
+      <table style="width:100%">
+        <tr>
+          <th>Example</th>
+          <th>Explaination</th>
+        </tr>
+          <tr>
+            <td><img src="3DPrintingGuide/platad.png" style="width:300px "></td>
+            <td>
+
+              <ul>
+                <li>Printer bed is heated to improve adhesion</li>
+                <li> Sometimes print object requires help in adhering to plate</li>
+                <li>A Raft is a base of extruded material, the object is built on it</li>
+                <li>Brims allow some extra adhesion to the base of object</li>
+                <li>Skirts are used to clean/extrude material to test</li>
+              </ul>
+
+            </td>
+        </tr>
+      </table>
+
+      <h3 style="color:LightGray;">Supports</h3>
+
+      <table style="width:100%">
+        <tr>
+          <th>Example</th>
+          <th>Explaination</th>
+        </tr>
+          <tr>
+            <td><img src="3DPrintingGuide/supp.jpg" style="width:300px "></td>
+            <td>
+
+              <ul>
+                <li>Supports are used to aid in printing overhangs</li>
+                <li>Support make impossible prints possible</li>
+                <li>Supports are removed after printing</li>
+                <li>Sometimes, the positing of the print can help in reducing the need for support</li>
+              </ul>
+
+            </td>
+        </tr>
+      </table>
+
+      <p>After going through an overview of 3D printing, I will show a quick guide on how to import a file into Cura and convert it into Gcode.</p>
+      <ul>
+        <li><a href="A3DPrinting1.html">Overview</a></li>
+        <li><a href="A3DPrinting3.html">Guide</a></li>
+      </ul>
+
+      </div>
+    </div>
+    <div id="footer">
+        Copyright &copy; 2021 Javier Lee.
+    </div>
+  </div>
+
+
+ </div>
+ <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex[no]-1].style.display = "block";
+}
+</script>
+</body>
+</html>

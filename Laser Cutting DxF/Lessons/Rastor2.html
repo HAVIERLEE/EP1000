@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HORUS OWNS THIS DOMAIN</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheetLessons.css" />
+  </head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>GUIDE: RASTERS</h1>
+    </div>
+    <div id="content">
+      <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="../about me.html">About Me</a>
+        <a href="../FablabSafety.html">Fablab Safety</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Blog
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../Blog/HTML.html">Web Development</a>
+          <a href="../Blog/vectorvsrastor.html">Vector Vs Raster</a>
+          <a href="../Blog/htmlvscss.html">HTML and CSS</a>
+          <a href="../Blog/MusicBox.html">Creating a Music Box</a>
+          <a href="../Blog/Arduino.html">Arduino Test Log</a>
+          <a href="../Blog/Printing1.html">3D Printing Attempts</a>
+        </div>
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Guide
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="3DPrinting1.html">Fusion360: Knight Piece</a>
+          <a href="A3DPrinting1.html">3D Printing</a>
+          <a href="Vector.html">Vector</a>
+          <a href="Rastor.html">Rasters</a>
+        </div>
+        </div>
+        <a href="../tooltable.html">Tool Table</a>
+        <a href="../project.html">Final Project</a>
+      </div>
+
+      <div id="main">
+        <div id="aaa">
+          <h2 style="color:LightGray;">How to use GIMP to remove a background of your image and replace it.</h2>
+
+          <p>STEP 9 to 11: Adding the background.</p>
+          <div class="slideshow-container">
+              <div class="mySlides">
+              <img src="RastorGuide/Step9.png" style="width:100%">
+            </div>
+
+              <div class="mySlides">
+              <img src="RastorGuide/Step10.png" style="width:100%">
+            </div>
+
+            <div class="mySlides">
+              <img src="RastorGuide/Step11.png" style="width:100%">
+            </div>
+            <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+          </div>
+
+          <p>Step 9: This step is optional but if your hair in the image appears too artifical, you can use the 'Smudge' Tool to smooth over the hair.</p>
+          <p>Step 10: To add the background, go to file and select 'open as layer' and use the background picture.</p>
+          <p>Step 11: Right click on the background, go to image > Scale Image. For this exmaple I want my width to be change to 1024, so I will replace the number in it. Once done, swap the layers at the bottom right corner and you should be done.</p>
+
+
+          <img src="RastorGuide/YEBOI.png" style="width:50%">
+
+          <p>Once done, it should look like this.</p>
+
+          <ul>
+            <li><a href="Rastor.html">Page 1</a></li>
+            <li><a href="Rastor2.html">Page 2</a></li>
+          </ul>
+
+      </div>
+    </div>
+    <div id="footer">
+        Copyright &copy; 2021 Javier Lee.
+    </div>
+  </div>
+
+
+ </div>
+ <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HORUS OWNS THIS DOMAIN</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheetblog.css" />
+  </head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>GUIDE: VECTOR DRAWING INKSCAPE</h1>
+    </div>
+    <div id="content">
+      <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="../about me.html">About Me</a>
+        <a href="../FablabSafety.html">Fablab Safety</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Blog
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="HTML.html">Web Development</a>
+          <a href="vectorvsrastor.html">Vector Vs Raster</a>
+          <a href="htmlvscss.html">HTML and CSS</a>
+          <a href="MusicBox.html">Creating a Music Box</a>
+          <a href="Arduino.html">Arduino Test Log</a>
+          <a href="Printing1.html">3D Printing Attempts</a>
+        </div>
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Guide
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../Lessons/3DPrinting1.html">Fusion360: Knight Piece</a>
+          <a href="../Lessons/A3DPrinting1.html">3D Printing</a>
+          <a href="../Lessons/Vector.html">Vector</a>
+          <a href="../Lessons/Rastor.html">Raster</a>
+        </div>
+        </div>
+        <a href="../tooltable.html">Tool Table</a>
+        <a href="../project.html">Final Project</a>
+      </div>
+
+      <div id="main">
+        <div id="aaa">
+          <h2 style="color:LightGray;">Vector Graphics Vs Raster Images</h2>
+      <p>In this small blog post, I am going to explain the difference between Vector Graphics and Raster Images.
+      </p>
+       <h3 style="color:LightGray;">Overview:</h3>
+       <p>Vector graphics are digital art that is rendered by a computer using a mathematical formula.Vector graphics are also known as scalable vector graphics (SVG).
+         These graphics consist of anchored dots and connected by lines and curves, similar to the connect-the-dot activities you may have done as a kid.
+         Raster images are made up of tiny pixels, or tiny dots that use color and tone to produce the image.
+         Pixels appear like little squares on graph paper when the image is zoomed in or enlarged. As shown in this image below:</p>
+         <img src="VectorVsRaster/vvsr.png" style="width:100%">
+      </div>
+    </div>
+    <div id="footer">
+        Copyright &copy; 2021 Javier Lee.
+    </div>
+  </div>
+
+
+ </div>
+ <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  x[slideIndex[no]-1].style.display = "block";
+}
+</script>
+</body>
+</html>
