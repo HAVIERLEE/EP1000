@@ -1,7 +1,7 @@
 
   body{
   font-family: Helvetica, Arial, sans-serif;
-  background-color: SlateBlue;
+  background-color: rgb(0, 0, 0);
 }
 
 selected{
@@ -19,7 +19,7 @@ selected{
 }
 
 #container{
-  background-color: Violet;
+  background-color: rgb(255, 255, 255);
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -27,14 +27,14 @@ selected{
 }
 
 #content{
-  background-color: SlateBlue;
+  background-color: rgb(255, 255, 255);
   width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
 
 #header{
-  background-color: #66CCFF;
+  background-color: #C0C0C0;
   color: white;
   text-align: center;
   padding: 20px;
@@ -46,7 +46,7 @@ selected{
 }
 
 #main{
-  background-color: Violet;
+  background-color: #808080;
   width: 1200px;
   padding-top: 10px;
 
