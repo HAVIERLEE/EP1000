@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CnC</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+  </head>
+
+
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>EP1001: 2D Computer Controlled Machining</h1>
+    </div>
+
+    <div id="content">
+      <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="../about me.html">About Me</a>
+        <a href="../FablabSafety.html">Fablab Safety</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Blog
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../Blog/HTML.html">Web Development</a>
+          <a href="../Blog/vectorvsrastor.html">Vector Vs Raster</a>
+          <a href="../Blog/htmlvscss.html">HTML and CSS</a>
+          <a href="../Blog/MusicBox.html">Creating a Music Box</a>
+          <a href="../Blog/Arduino.html">Arduino Test Log</a>
+          <a href="../Blog/Printing1.html">3D Printing Attempts</a>
+        </div>
+
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">EP1001
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../EP1001/Electronics.html">Electronics Production & Assignment</a>
+          <a href="../EP1001/ElectronicsD.html">Electronics Design</a>
+          <a href="../EP1001/CNC.html">2D Computer Controlled Machining</a>
+          <a href="../EP1001/Embedded.html">Embedded Programming</a>
+          <a href="../EP1001/Moldcast.html">Molding & Casting</a>
+          <a href="../EP1001/Machining.html">3D Machining</a>
+          <a href="../EP1001/Interface.html">Interface & Applications Programming</a>
+        </div>
+        </div>
+
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Guides
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../Lessons/3DPrinting1.html">Fusion360: Knight Piece</a>
+          <a href="../Lessons/A3DPrinting1.html">3D Printing</a>
+          <a href="../Lessons/Vector.html">Vector</a>
+          <a href="../Lessons/Rastor.html">Raster</a>
+        </div>
+        </div>
+        <a href="../tooltable.html">Tool Table</a>
+        <a href="../project.html">Final Project</a>
+      </div>
+      <div id="main">
+        <div id="aaa">
+          <h2 style="color:LightGray;">Introduction</h2>
+          <p>This section of the blog talks about what I learnt about 2D Computer Controlled Machining. I learnt about the process of using a CNC router and how I used it to make a key compoenet for my project.</p>
+
+          <h3 style="color:LightGray;">Competency test</h3>
+          <p>Firstly, I had to take a competency test. This test required us to use the large CNC router located in T11C and create a coaster.
+          </p>
+          <img src="CNCP/machine.jpg" style="width:100%">
+
+          <table style="width:100%">
+            <tbody>
+            <!-- Heading -->
+            <tr>
+              <th>Steps Taken</th>
+              <th>Explanation</th>
+            </tr>
+            <!-- Table data 1: Etching-->
+              <tr>
+                <!-- Image -->
+                <td>
+                  <img src="CNCP/Step1.jpg" style="width:100%">
+                </td>
+                <!-- Explanation -->
+                <td>
+                    <p>
+                      <h4 style="color:LightGray;">Step 1</h4>
+                      Open the DXF file containing the model you would want to cut using the router. Depending on what you are planning to cut, select what lines are pockets and what are profiles.
+                      If a line is a pocket it means that the cutter would not cut the material all the wat through. While if the line chosen is a profile, the cutter would cut through it.
+                    </p>
+                </td>
+            </tr>
+
+            <!-- Table data 2: Machining -->
+              <tr>
+                <!-- Image -->
+                <td>
+                  <img src="CNCP/Step2.jpg" style="width:100%">
+                </td>
+                <!-- Explanation -->
+                <td>
+                    <p><h4 style="color:LightGray;">Step 2</h4>
+                    Shown in the picture on the left, you are able to see the two types of cuts made. The pocket being the one in the centre and the profile being the one on the outside.
+                    Additonally, add tabs to the workpiece to ensure that it does not fly out.
+                    Save the toothpath and export the G-code.
+                    </p>
+                </td>
+            </tr>
+
+            <!-- Table data 3: Vinyl cutter -->
+              <tr>
+                <!-- Image -->
+                <td>
+                  <img src="CNCP/Step3.jpg" style="width:100%">
+                </td>
+                <!-- Explanation -->
+                <td>
+                    <p><h4 style="color:LightGray;">Step 3</h4>
+                    Once the G Code is exported, you can use NC viewer on the computer to open the file. With it you can set where the X and Y axis where the piece is going to be cut which will be your reference points.
+                    </p>
+                </td>
+            </tr>
+
+            <!-- Table data 4: Laser Cutting -->
+              <tr>
+                <!-- Image -->
+                <td>
+                  <img src="CNCP/Step4.jpg" style="width:100%">
+                </td>
+                <!-- Explanation -->
+                <td>
+                  <p><h4 style="color:LightGray;">Step 4</h4>
+                  Before you cut ensure that the X, Y and Z reference points are set in the software. To set the Z coordinate of the router, use the Z axis limit switch to mark the Z axis refernce point.
+                  </p>
+                </td>
+            </tr>
+
+            <!-- Table data 5: Printing -->
+              <tr>
+                <!-- Image -->
+                <td>
+                  <img src="CNCP/Step5.jpg" style="width:100%">
+                </td>
+                <!-- Explanation -->
+                <td>
+                  <p><h4 style="color:LightGray;">Step 5</h4>
+                  Once the router is done witth your workpiece, use a chisel to hammer out the tabs.
+                  </p>
+                </td>
+            </tr>
+
+            <!-- Table data 6: Sewing -->
+              <tr>
+                <!-- Image -->
+                <td>
+                  <img src="CNCP/Step6.jpg" style="width:100%">
+                </td>
+                <!-- Explanation -->
+                <td>
+                  <p><h4 style="color:LightGray;">Step 6</h4>
+                  With that, your workpiece is done. Make sure to sand the surface for a clean finish.
+                  </p>
+                </td>
+            </tr>
+
+
+
+          </tbody>
+          </table>
+          <!-- End of table -->
+
+          <h3 style="color:LightGray;">Final Project Fabrication: CNC Router Base Axis</h3>
+          <p>There are many ways to fabricate a PCB. Below this section there is a small table showcasing the different methods of fabrication of PCBs.
+          </p>
+
+          <table style="width:100%">
+            <tbody>
+            <!-- Heading -->
+            <tr>
+              <th>Example Image</th>
+              <th>Explanation</th>
+            </tr>
+            <!-- Table data 1: Etching-->
+              <tr>
+                <!-- Image -->
+                <td>
+                  <img src="Electronics/etching.jpg" style="width:100%">
+                </td>
+                <!-- Explanation -->
+                <td>
+                    <p>To get started on coding an arduino, you will of course need an arduino. My school provided us with an Arduino Uno to use, but you can use similar arduino boards. The sceond most impoartant thing you will need is a breadboard. Although you can make these circuits without a arduino board,
+                      a breadboard will certainly help with the standardization. Lastly you will need the componets such as wires, LEDs, resistors and push button switch.
+                    </p>
+                </td>
+            </tr>
+
+            <!-- Table data 2: Machining -->
+              <tr>
+                <!-- Image -->
+                <td>
+                  <img src="Electronics/machining.jpg" style="width:100%">
+                </td>
+                <!-- Explanation -->
+                <td>
+                    <p>To get started on coding an arduino, you will of course need an arduino. My school provided us with an Arduino Uno to use, but you can use similar arduino boards. The sceond most impoartant thing you will need is a breadboard. Although you can make these circuits without a arduino board,
+                      a breadboard will certainly help with the standardization. Lastly you will need the componets such as wires, LEDs, resistors and push button switch.
+                    </p>
+                </td>
+            </tr>
+
+            <!-- Table data 3: Vinyl cutter -->
+              <tr>
+                <!-- Image -->
+                <td>
+                  <img src="Electronics/Vinyl.jpg" style="width:100%">
+                </td>
+                <!-- Explanation -->
+                <td>
+                    <p>To get started on coding an arduino, you will of course need an arduino. My school provided us with an Arduino Uno to use, but you can use similar arduino boards. The sceond most impoartant thing you will need is a breadboard. Although you can make these circuits without a arduino board,
+                      a breadboard will certainly help with the standardization. Lastly you will need the componets such as wires, LEDs, resistors and push button switch.
+                    </p>
+                </td>
+            </tr>
+
+            <!-- Table data 4: Laser Cutting -->
+              <tr>
+                <!-- Image -->
+                <td>
+                  <img src="Electronics/lasercutting.jpg" style="width:100%">
+                </td>
+                <!-- Explanation -->
+                <td>
+                    <p>To get started on coding an arduino, you will of course need an arduino. My school provided us with an Arduino Uno to use, but you can use similar arduino boards. The sceond most impoartant thing you will need is a breadboard. Although you can make these circuits without a arduino board,
+                      a breadboard will certainly help with the standardization. Lastly you will need the componets such as wires, LEDs, resistors and push button switch.
+                    </p>
+                </td>
+            </tr>
+
+            <!-- Table data 5: Printing -->
+              <tr>
+                <!-- Image -->
+                <td>
+                  <img src="Electronics/printing.jpg" style="width:100%">
+                </td>
+                <!-- Explanation -->
+                <td>
+                    <p>To get started on coding an arduino, you will of course need an arduino. My school provided us with an Arduino Uno to use, but you can use similar arduino boards. The sceond most impoartant thing you will need is a breadboard. Although you can make these circuits without a arduino board,
+                      a breadboard will certainly help with the standardization. Lastly you will need the componets such as wires, LEDs, resistors and push button switch.
+                    </p>
+                </td>
+            </tr>
+
+            <!-- Table data 6: Sewing -->
+              <tr>
+                <!-- Image -->
+                <td>
+                  <img src="Electronics/Sewing.jpg" style="width:100%">
+                </td>
+                <!-- Explanation -->
+                <td>
+                    <p>To get started on coding an arduino, you will of course need an arduino. My school provided us with an Arduino Uno to use, but you can use similar arduino boards. The sceond most impoartant thing you will need is a breadboard. Although you can make these circuits without a arduino board,
+                      a breadboard will certainly help with the standardization. Lastly you will need the componets such as wires, LEDs, resistors and push button switch.
+                    </p>
+                </td>
+            </tr>
+
+
+
+          </tbody>
+          </table>
+          <!-- End of table -->
+
+          <p>For the assignment we will be using the maching method to do our PCB fabrication.
+          </p>
+
+          <h3 style="color:LightGray;">Electronics Design</h3>
+          <p>At this point after learning about Electronic production, we have to do the electronic design for the PCB. You can view how I did the <a href="EP1001/ElectronicsD.html">Electronics Design</a> over here.
+          </p>
+
+
+
+      </div>
+    </div>
+    </div>
+    <div id="footer">
+        Copyright &copy; 2023 Javier Lee.
+    </div>
+
+
+ </div>
+ <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+</body>
+</html>
