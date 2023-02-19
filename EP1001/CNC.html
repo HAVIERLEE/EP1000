@@ -172,114 +172,57 @@
           <!-- End of table -->
 
           <h3 style="color:LightGray;">Final Project Fabrication: CNC Router Base Axis</h3>
-          <p>There are many ways to fabricate a PCB. Below this section there is a small table showcasing the different methods of fabrication of PCBs.
+          <p>For my CNC assignement, I decided to CNC machine out the base for my CNC router that will be used for my final project.
+          </p>
+          <img src="CNCP/CNCP.png" style="width:100%">
+          <p>While making the base, I had to create a parameter for the thickness of the material as I do not know what lenght of thickness the Fablab had on at T11C. In additon to creating a variable parameter
+            for the model, I had to also install a 'Dogbone' addon for Fusion 360. A dogbone is used when you want to joint two parts together using mortises and tenons. A cnc machine uses a round cutter and thus, can't
+            make square holes. To get around this problem the 'Dogbone' is used to deform a sqaure to fit another sqaure in it.
+            Shown in the picture below, the Dogbone addon has 3 parts to it. The top being a selector that allows you to choose which body the dogbone modification is applied to. The second is the tool diameter which
+            is set to the tool diameter you will be using in the CNC router. The Radial Offset is used if the centre of the curve is accessible from the points on the tangent. However, this project will not need a
+            radial offset.
           </p>
 
-          <table style="width:100%">
-            <tbody>
-            <!-- Heading -->
+          <tbody>
+          <!-- Table data 1: Etching-->
             <tr>
-              <th>Example Image</th>
-              <th>Explanation</th>
-            </tr>
-            <!-- Table data 1: Etching-->
-              <tr>
-                <!-- Image -->
-                <td>
-                  <img src="Electronics/etching.jpg" style="width:100%">
-                </td>
-                <!-- Explanation -->
-                <td>
-                    <p>To get started on coding an arduino, you will of course need an arduino. My school provided us with an Arduino Uno to use, but you can use similar arduino boards. The sceond most impoartant thing you will need is a breadboard. Although you can make these circuits without a arduino board,
-                      a breadboard will certainly help with the standardization. Lastly you will need the componets such as wires, LEDs, resistors and push button switch.
-                    </p>
-                </td>
-            </tr>
+              <!-- Image -->
+              <td>
+                <img src="CNCP/dogbone.png" style="width:50%">
+              </td>
+              <!-- Explanation -->
+              <td>
+                    <img src="CNCP/dogbone1.png" style="width:35%">
+              </td>
+          </tr>
+        </tbody>
 
-            <!-- Table data 2: Machining -->
-              <tr>
-                <!-- Image -->
-                <td>
-                  <img src="Electronics/machining.jpg" style="width:100%">
-                </td>
-                <!-- Explanation -->
-                <td>
-                    <p>To get started on coding an arduino, you will of course need an arduino. My school provided us with an Arduino Uno to use, but you can use similar arduino boards. The sceond most impoartant thing you will need is a breadboard. Although you can make these circuits without a arduino board,
-                      a breadboard will certainly help with the standardization. Lastly you will need the componets such as wires, LEDs, resistors and push button switch.
-                    </p>
-                </td>
-            </tr>
-
-            <!-- Table data 3: Vinyl cutter -->
-              <tr>
-                <!-- Image -->
-                <td>
-                  <img src="Electronics/Vinyl.jpg" style="width:100%">
-                </td>
-                <!-- Explanation -->
-                <td>
-                    <p>To get started on coding an arduino, you will of course need an arduino. My school provided us with an Arduino Uno to use, but you can use similar arduino boards. The sceond most impoartant thing you will need is a breadboard. Although you can make these circuits without a arduino board,
-                      a breadboard will certainly help with the standardization. Lastly you will need the componets such as wires, LEDs, resistors and push button switch.
-                    </p>
-                </td>
-            </tr>
-
-            <!-- Table data 4: Laser Cutting -->
-              <tr>
-                <!-- Image -->
-                <td>
-                  <img src="Electronics/lasercutting.jpg" style="width:100%">
-                </td>
-                <!-- Explanation -->
-                <td>
-                    <p>To get started on coding an arduino, you will of course need an arduino. My school provided us with an Arduino Uno to use, but you can use similar arduino boards. The sceond most impoartant thing you will need is a breadboard. Although you can make these circuits without a arduino board,
-                      a breadboard will certainly help with the standardization. Lastly you will need the componets such as wires, LEDs, resistors and push button switch.
-                    </p>
-                </td>
-            </tr>
-
-            <!-- Table data 5: Printing -->
-              <tr>
-                <!-- Image -->
-                <td>
-                  <img src="Electronics/printing.jpg" style="width:100%">
-                </td>
-                <!-- Explanation -->
-                <td>
-                    <p>To get started on coding an arduino, you will of course need an arduino. My school provided us with an Arduino Uno to use, but you can use similar arduino boards. The sceond most impoartant thing you will need is a breadboard. Although you can make these circuits without a arduino board,
-                      a breadboard will certainly help with the standardization. Lastly you will need the componets such as wires, LEDs, resistors and push button switch.
-                    </p>
-                </td>
-            </tr>
-
-            <!-- Table data 6: Sewing -->
-              <tr>
-                <!-- Image -->
-                <td>
-                  <img src="Electronics/Sewing.jpg" style="width:100%">
-                </td>
-                <!-- Explanation -->
-                <td>
-                    <p>To get started on coding an arduino, you will of course need an arduino. My school provided us with an Arduino Uno to use, but you can use similar arduino boards. The sceond most impoartant thing you will need is a breadboard. Although you can make these circuits without a arduino board,
-                      a breadboard will certainly help with the standardization. Lastly you will need the componets such as wires, LEDs, resistors and push button switch.
-                    </p>
-                </td>
-            </tr>
-
-
-
-          </tbody>
-          </table>
-          <!-- End of table -->
-
-          <p>For the assignment we will be using the maching method to do our PCB fabrication.
+          <p>You can see a before and after picture at the bottom showing the differnce with dogbone and without dogbone. Notice how there are small curves in the corners of the base plate.
           </p>
 
-          <h3 style="color:LightGray;">Electronics Design</h3>
-          <p>At this point after learning about Electronic production, we have to do the electronic design for the PCB. You can view how I did the <a href="EP1001/ElectronicsD.html">Electronics Design</a> over here.
-          </p>
+          <tbody>
+          <!-- Table data 1: Etching-->
+            <tr>
+              <!-- Image -->
+              <td>
+                <img src="CNCP/dogbone3.png" style="width:35%">
+              </td>
+              <!-- Explanation -->
+              <td>
+                    <img src="CNCP/dogbone2.png" style="width:35%">
+              </td>
+          </tr>
+        </tbody>
 
+        <p>Lastly, the pieces are cut using Medium Density fibreboard. Which is a material that is harder than plywood. Therefore, I had to use a higher feedrate for the router so it can cut through the material more easily.
+        </p>
 
+        <img src="CNCP/dogbone4.jpg" style="width:100%">
+
+        <p> This is what the entire base looks like fully assembled.
+        </p>
+
+        <img src="CNCP/dogbone5.jpg" style="width:100%">
 
       </div>
     </div>
