@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title> My Final Project</title>
+    <title> My EP1001 Final Project</title>
     <link rel="stylesheet" type="text/css" href="./stylesheet.css" />
   </head>
 <body>
@@ -48,40 +48,54 @@
         <div id="aaa">
           <h2>Project Title: CNC Router</h2>
           <h3>Final Project</h3>
-          <p>For my final project for EP1001, I chose to make a CNC router to challenge myself. Currently my home workshop only consist of a 3D printer and I want to expand it so I decied to make a CNC machine.</p>
+          <p>For my final project for EP1001, I chose to make a CNC router to challenge myself. The cheapest CNC router that I could find on the internet cost $633.96. Therefore the main goal of this
+          project is to make a CNC router that is cheaper than the one I could find on the internet. </p>
           <h3>What does it do?</h3>
           <p>The CNC router will take G-code files I send from my laptop to the cut out designs onto whatever material I place on the board.</p>
           <h3>What are it's features?</h3>
           <p>The CNC router will use an ATmega328 PCB with GRBL which is an open source parallel-port-based motion control for CNC milling.</p>
-          <h3>What will I make</h3>
+
+          <h4> Preview </h4>
           <table style="width:100%">
           <tr>
-            <th>Process</th>
-            <th>Features</th>
+            <th>Test Cut</th>
+            <th>1 Min Video</th>
+          </tr>
+
+            <tr>
+              <td><iframe width="560" height="315" src="https://www.youtube.com/embed/nVf0ZSj8GF0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+
+              <td><iframe width="560" height="315" src="https://www.youtube.com/embed/GNNfKkBNALs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              </td>
+          </tr>
+          </table>
+
+
+          <table style="width:100%">
+          <tr>
+            <th></th>
+            <th>Requiements</th>
           </tr>
           <tr>
-            <td>CAD Design, Graphics</td>
-            <td>I will use CAD to design the base, the mount for the turret and the turret of the launcher.</td>
+            <td>2D and/or 3D designed part(s)</td>
+            <td>The CNC router consist of both 3D printed parts and CNC milled parts.</td>
           </tr>
           <tr>
-            <td>Laser cutting</td>
-            <td>I will laser cut the base of Launcher.</td>
+            <td>subtractive manufacturing (i.e. cnc) part</td>
+            <td>The entire base of the machine is made from Medium Density Fibreboard.</td>
           </tr>
           <tr>
-            <td>3D Printing</td>
-            <td>I will 3D print a mount for the Launcher and the firing mechanism.</td>
+            <td>An embedded microntroller that you designed & fabricated</td>
+            <td>I used an ATmega328p.</td>
           </tr>
           <tr>
-            <td>Micro-controller</td>
-            <td>I will be using an Arduino Uno to Control the Servo Motor</td>
+            <td>input and/or output device(s) that interacts with the user</td>
+            <td>I will be using my latop to comunicate with the microcontroller that moves the CNC machine. The microcontroller
+            moves the stepper motors which moves the cutter.</td>
           </tr>
           <tr>
-            <td>Input devices</td>
-            <td>Rotary Encoder</td>
-          </tr>
-          <tr>
-            <td>Output devices</td>
-            <td>2 Servo Motor, X axis, Y axis for the Turret. LCD Display meant for displaying the Angle of the Motors. Solenoid used to push the dart through the firing mechanism. 2 DC motors will be used as well but they are not being controlled by the Arduino.</td>
+            <td>embedded program</td>
+            <td>I will be using GRBL with my own modifications.</td>
           </tr>
           </table>
           <h3>Bill of materials</h3>
@@ -94,99 +108,46 @@
             </tr>
             <tr>
               <td>1</td>
-              <td>2</td>
-              <td>180 TowerPro High Torque MG995 </td>
-              <td>$7.70</td>
+              <td>4</td>
+              <td>Nema 17 Stepper Motor (40mm height)</td>
+              <td>$14.00</td>
             </tr>
             <tr>
               <td>2</td>
               <td>1</td>
-              <td>Degrees Rotary Encoder Link: https://tinyurl.com/yx9ymvx9</td>
-              <td>$1.07</td>
+              <td>CNC Shield V3 Engraving Machine + A4988 Stepper Motor Driver</td>
+              <td>$7.91</td>
             </tr>
             <tr>
               <td>3</td>
               <td>1</td>
-              <td>LCD Screen</td>
+              <td>Medium Density Fibreboard</td>
               <td>Fablab</td>
             </tr>
             <tr>
               <td>4</td>
-              <td>1</td>
-              <td>SG90 Mirco Servo</td>
-              <td>$12.00</td>
+              <td>2</td>
+              <td>500mm, 330mm, 120mm (12mm) Stainless Steel Rods</td>
+              <td>~$30</td>
             </tr>
             <tr>
               <td>5</td>
               <td>2</td>
-              <td>6V DC motors </td>
-              <td>$6.00</td>
+              <td>500mm, 280mm, 120mm (8mm Lead Screws) </td>
+              <td>~$30</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>6</td>
+              <td>12mm X 57mm Bearings</td>
+              <td>$76.90</td>
             </tr>
           </table>
 
           <h3>Documentation:</h3>
-          <p>Overview: I came up with serveral design ideas on how I should design my sentry gun.
-          It needs room to house an Lcd Screen to display the angle of the servo motor, a rotary encoder to control the entire machine, an Arduino and a breadboard. I will need to be able to use
-          180 Servo Motor to move both the X and Y axis since they can hold their position. Lastly, I need the most important feature, the mechanism
-          used to fire the dart. Ideally, I want it to be able to fire more than 1 bullet before it needs to be reloaded. This is because
-          I find it it irritating if this launcher can only fire a single round before needing to be reloaded. </p>
+          <p>Overview: </p>
 
-          <h4>Research:</h4>
-          <table style="width:100%">
-            <tr>
-              <th>Firing mechanism</th>
-              <th>Explaination</th>
-            </tr>
-
-              <tr>
-                <td><img src="Images/AirDrainBlaster.jpg" style="width:300px "></td>
-                <td>
-
-                  <p>The image shown shows a homemade nerf blaster that uses air to fire a dart. Using a Air Drain Blaster,
-                  which is a tool used to clean drains by pumping and compressing the air which is then used to clear a drain
-                  by delivering a force of compressed air to push the debris. The same logic can be applied to fire a Nerf
-                  dart as well.</p>
-
-                </td>
-            </tr>
-
-          </tr>
-
-            <tr>
-              <td><img src="Images/Springer.jpg" style="width:300px "></td>
-              <td>
-
-                <p>While researching on firing mechanism for nerf guns, I decided to dismantle my own nerf guns to see how they
-                worked. This Nerf gun uses compressed air as well. However, instead of pumping the gun, you instead pull back on
-                a small 'plunger' which lock itself and compressed the spring. It also fills the tube it was in with air. Once the trigger is pulled,
-                it releases the lock, the weight of the spring pushes the plunger back into the stube. This rapidly compresses the air inside
-                it sending the dart flying.</p>
-
-              </td>
-          </tr>
-
-          <tr>
-            <td><img src="Images/Flywheel.jpg" style="width:300px "></td>
-            <td>
-
-              <p>This nerf gun uses 'Flywheels' not compressed air. These nerf guns also don't require any form of pumping or pull back action in order for it to work.
-              Using 2 motors spining in opposites directions called a , "Flywheel", when the user pulls the trigger it pushes the dart fowards into the 'flywheels'
-              which send the dart forward. This is mostly used with magazines since they can hold more bullets.</p>
-
-            </td>
-        </tr>
-
-          </table>
-
-          <h4>Research Conclusion:</h4>
-          <p>In Conclusion, I will be incorporating the 'Flywheel' firing mechanism into my design. The Flywheel allows me to use nerf magzines for my design which
-          will allow me to fire more than one dart before reloading. Theoretically, the other mechanism could also fire more than 1 shot before needing to be reloaded.
-          However, in order for it to be automatic, I would either need to find a way to get an air compressor or use a motor to pull back a spring. I am unfamiliar with creating
-          a system that allows me to use compressed air to push the dart and it is difficult for a motor to pull back a spring that is used in nerf blasters since they have about
-          2 kg worth of strength which is difficult for a small motor to pull. Flywheels on the other hand uses 2 dc motors and something to push the dart, I could use a servo motor
-          to act as the "Trigger" to push the dart and I know how to wire the motors up as well.</p>
-
-          <h4>Design Sketches:</h4>
+          <h4>Ideation:</h4>
           <table style="width:100%">
             <tr>
               <th>Design</th>
@@ -194,14 +155,11 @@
             </tr>
 
               <tr>
-                <td><img src="Images/Design1.jpg" style="width:300px "></td>
+                <td><img src="EP1001PIC/CheapCNC.jpg" style="width:300px "></td>
                 <td>
 
-                  <p>Design 1 is the first idea that popped into my head when thinking of a design. It has a circular base which allows me to
-                  house the LCD, Arduino, Rotary Encoder and a rocker switch. I had the idea to include a rocker switch into my design as I
-                  figure some sort of "Safety" just like in firearms might be interesting. It also means I would not need to use a Motor Driver
-                  to drive the motors since they would connected directly from the battery. The Rocker Switch allows the User to control the
-                  when the motors are used, as they tend to get noisy when running.</p>
+                  <p>This is the $633.96 tabletop CNC router I was refering to eariler. It has a "fixed" X-axis carriage. It has a Working area of 126mm*88mm*38mm which is good for PCB production and engraving small pieces of material.
+                  However, I am looking to make something that has a bigger Working area for bigger projects.</p>
 
                 </td>
             </tr>
@@ -209,416 +167,278 @@
           </tr>
 
             <tr>
-              <td><img src="Images/Design2.jpg" style="width:300px "></td>
+              <td><img src="EP1001PIC/SchCNC.png" style="width:300px "></td>
               <td>
 
-                <p>Design 2 is sort of tiny improvement to Design 1. The area of the base is bigger, since it is a sqaure. Most importantly,
-                it wil be easier to fabricate since I have no idea how to make a curved surface.  </p>
+                <p>This is the CNC router used in school called the Stepcraft 420. It has a Working area of 298 x 415 x 132 mm. It uses two stepper motors to move the X-Axis Carriage. Unlike the other two CNC routers on this list, its Z-axis carriage uses
+                ball bearing instead of linear bearings. The ball bearings appear to travel a long a aluminimum groove which might provide better stablity compared to using linearing bearings. I like the design of the X-axis carraige as it
+                does not block the working area of the router.</p>
 
               </td>
           </tr>
 
           <tr>
-            <td><img src="Images/Design3.jpg" style="width:300px "></td>
+            <td><img src="EP1001PIC/HmCNC.jpg" style="width:300px "></td>
             <td>
 
-              <p>Design 3 uses a pyramid for its base. This is allow the LCD screen, rotary encoders and rocker switch to face the user. This should make it
-              more easier to look at the screen. The Turrent of the gun is also slim down this is to prevent the possibility of the servo motor not being
-              able to handle the stress of the gun and other servo motor.</p>
+              <p>This a homemade CNC machine. It has a varaible design allowing for a a custom working area with how the parts are made. Similar to the step craft in school, the homemade CNC router uses two steppers to control the X-Axis Carriage.
+              I like the spindle carraige for this design as there is a part that fits a Dermel Rotary Tool which is a item I alraedy own which can be used as a spindle.</p>
 
             </td>
         </tr>
 
           </table>
 
-          <h4>Design Sketch Conclusion:</h4>
-          <p>In Conclusion, I will be using design 2. Although design 3 might be more appealing, the time constraint I have on this project means
-          that I should try to go for a faster fabrication, since I will have to work on the code as well. Since design 2 is just a more ideal version
-          of design 1, I chose to use it. In addition, it was suggested that we make a mock up of our design using cardboard. However, due to a lack of time, I have deceided not to do it.</p>
+          <h4>Research Conclusion:</h4>
+          <p>In Conclusion, I will be incorporating the certain aspects of the Homemade CNC machine and the Stepcraft CNC router. I like the idea of have an X axis that isn't blocked by the lead screw and rods of the machine.
+          Additionally, having a spindle carraige where I could use my own rotary tool as a spindle is ideal as it would cut down on the wiring I would have to do.</p>
 
-          <h4>Creating a CAD MODEL</h4>
+          <h4>Design Cad Model:</h4>
           <table style="width:100%">
             <tr>
-              <th>Sketch</th>
+              <th>Design</th>
               <th>Explaination</th>
             </tr>
 
               <tr>
-                <td><img src="Images/BaseTurrentGun.jpg" style="width:300px "></td>
+                <td><img src="EP1001PIC/Design.png" style="width:300px "></td>
                 <td>
 
-                  <p>The Design Consist of 3 different parts. Each labelled in the sketch, the Base, where the arduino and all other eletronics are stored.
-                  The Turret which holds the Gun, and the Gun which houses the flwheels. magazine and pusher.</p>
-
-                </td>
-            </tr>
-          </table>
-
-          <table style="width:100%">
-            <tr>
-              <th> Cad model progress</th>
-              <th>Explaination</th>
-            </tr>
-
-              <tr>
-                <td><img src="Images/Cad/Base.png" style="width:300px "></td>
-                <td>
-
-                  <p>I first started by creating a box similiar to the music box, creating 6 sides and adding teeth to them. I changed the length
-                  of the base a few times, going from 140 mm to 190mm and settling on 220 mm. This is to give me enough room to fit my arduino, breadboard, etc.
-                  As well as give me spare room for wiring, since it will be move constantly, I was afraid that the wires would be strached too thin so I figured,
-                  to prevent that I should give myself more room to work with.</p>
+                  <p>Design 1 is mostly based off of the homemade CNC machine design using aluminimum profiles for a base as the profiles are modular allowing it to be assembled easily with L backets. However, this
+                  design does not fit one of the requirements as parts of it has to be made with a subtractive manufacturing part and the only part I plan to make using subtractive manufacturing is the sacrificial board
+                  of the router.</p>
 
                 </td>
             </tr>
 
+
+
             <tr>
-              <td><img src="Images/Cad/Base2.png" style="width:300px "></td>
+              <td><img src="EP1001PIC/Design1.png" style="width:300px "></td>
               <td>
 
-                <p>With the base roughly completed, I used construction lines to map out the rough dimensions of how I want the turrent to move. I then
-                  imported a step file of the servo motor I would be using and created a hole for it. It is at this point, I decided to make it out of wood. This is
-                so I can easily make modifications to my design like filing off pieces I don't need. </p>
+                <p>Design 2 uses the idea from the stepcraft machine it has a similiar working area of both designs but for this design, I lowered the height of the Y - Axis stepper similar to the stepcraft router.
+                I would have gone with this design if it weren't for two issues I encoutered after I designed it. The X-Axis Carraige was just enough to fit in my printer, but the working height wwas only 18mm.
+                With how big the piece is, it would take (28 Hours and 38 Mins) to print out the entire piece using my settings for the design. Another issue with this design was the amount of pieces I would have to make for it.
+                The total number of pieces of this design is around 20 pieces, which is time consuming. The more pieces also meant that there are more factors to the overall sturcture of the design so if a piece is to big
+                or small I would have to redo it again.</p>
 
               </td>
           </tr>
 
           <tr>
-            <td><img src="Images/Cad/Turrent.png" style="width:300px "></td>
+            <td><img src="EP1001PIC/Design2.png" style="width:300px "></td>
             <td>
 
-              <p>I made the turrent which would hold the gun, following my sketechs. I set it so it has a length of 140 mm which would give me 80 mm of space to add
-              the LCD screen and other stuff.</p>
+              <p>Design 3 takes aspects from both designs. The main goal of this design is to reduce the amount of parts I need to CNC and reduce the overall size of the 3D printed parts to fit within the fablab printing requirements.
+              I managed to reduce the amount of pieces for the base going from 20 pieces to 9 pieces. The size of the piece is also reduced so that the overall print time is (3 hours and 30 mins) which is just barely over the limit of allocated printing time.</p>
 
             </td>
         </tr>
 
-        <tr>
-          <td><img src="Images/Cad/Turrent1.png" style="width:300px "></td>
+
+                <tr>
+                  <td><img src="EP1001PIC/LB1.jpg" style="width:300px "></td>
+                  <td>
+
+                    <p><h3>Additional Design Constraints</h3>
+                    To prepare for this project in advance, I had preorder the materials in advance before the chinese new year. This left me with a Design Constraint. The pic shown on the left is the linear bearing I ordered
+                    for this project. I saw many different poeple recommend this type of bearing for this project, not knowing why but as a preparation for my designs, I decided to get them in advance. </p>
+
+                  </td>
+              </tr>
+
+              <tr>
+                <td><img src="EP1001PIC/LB2.jpg" style="width:300px "></td>
+                <td>
+
+                  <p>I later found out a few days later about these type of linear bearings. These "Pillow Block" Bearings are much better for CNC machines as some machines actaully use them, they have pre existing slots for you
+                    to mount the bearings onto a flat surface. This would offer more freedom in my design. However, since I have already bought the linear bearings shown above, I decided to stick with them as not to waste my money.
+                    This has handicapped me in terms of designs since I did not want to spend additonal money on a different sets of bearings and waste the ones I had already.
+                  </p>
+
+                </td>
+            </tr>
+          </table>
+
+          <h3>Material Explaination</h3>
+          <table style="width:100%">
+          <tr>
+            <th>Example</th>
+            <th>Explaination</th>
+          </tr>
+
+          <tr>
           <td>
-
-            <p>I added the hole for my servo motor using similiar dimensions.</p>
-
+          <img src="EP1001PIC/patcom.png" style="width:75% ">
           </td>
-      </tr>
+          <td>
+            <p>
+              <h4>Infill Pattern Comparison</h4>
+              For my CNC router design, I had to factors to consider while desgining it. One of these includes the infill pattern used while 3D printing the parts. Since part will undergo alot of load therefore I needed a part that handle both
+              perpendicular and transverse load. Therefore I chose the trianglar infill pattern for my 3D printed part.
+            </p>
+          </td>
+          </tr>
 
-      <tr>
-        <td><img src="Images/Cad/Turrent2.png" style="width:300px "></td>
-        <td>
+          <tr>
+          <td>
+          <img src="EP1001PIC/infcom.png" style="width:75% ">
+          </td>
+          <td>
+            <p>
+              <h4>Infill Density Comparison</h4>
+               Infill Desnity also helps with the stress distribution of the load on the router. Generally the higher the infill the stronger the part is. However, there is a diminishing return for the Infill Desnity, ideally I would use 100%
+               infill but due to material cost, print time and other factors, it is better to try to find a sweet between everything. I generally found a sweet spot for my parts around 20% - 30%. This allows me to hit the 3 hour printing limit of the
+               fablab.
+            </p>
+          </td>
+          </tr>
 
-          <p>I added the hole for my servo motor using similiar dimensions.</p>
+            <tr>
 
-        </td>
-    </tr>
 
-    <tr>
-      <td><img src="Images/Cad/Turrent3.png" style="width:300px "></td>
-      <td>
+              <td><img src="EP1001PIC/plaf.jpeg" style="width:300px "></td>
 
-        <p>At this point, I realised I need to create something that would allow for me to move the
-        gun smoothly up and down. However if I created a wheel of sorts then friction would rub against it and the motor which
-        will damage both of them. I decided to purchase a ball bearing to solve this issue. It is 26mm so I creaeted
-        a hole to fit it.</p>
+              <td><h4>3D print material Comparsion</h4>
+                <p>All of my 3D printed parts are printed with PLA+ or PLA-F both of which are better than PLA at least that's what I can find about them. PLA+ is stronger, more flexible, and more ductile than PLA and PLA-F is the results
+              of combing PLA with ABS for a stronger material. Additonally, if I had access to print with PETG I would have taken it. The cost of PETG is almost the same and both of them are easy to print
+              but PETG is a little bit more flexible so it's harder to break it which is more ideal for this project</p>
 
-      </td>
-  </tr>
+              </td>
+          </tr>
 
-  <tr>
-    <td><img src="Images/Cad/Turrent4.png" style="width:300px "></td>
-    <td>
 
-      <p>With the hole created, I created a model similiar to the ball bearing I used and placed it into the turrent.</p>
 
-    </td>
-</tr>
+          <tr>
 
-<tr>
-  <td><img src="Images/Cad/Turrent6.png" style="width:300px "></td>
-  <td>
 
-    <p>I followed it up by creating a rod to act as the plaform for the gun. Since it needed a flat surface to lay on.</p>
+            <td><img src="EP1001PIC/mdfvsply.jpg" style="width:300px "></td>
 
-  </td>
-</tr>
+            <td><h4>Base Material Comparsion</h4>
+              <p>My original plan was to use plywood to make the base since I thought it was the only material available at the fablab. I was informed that there was another material available at the fablab as well. Medium Desnity
+              Fibreboard or MDF for short. After doing some reserach, I decied to go with MDF for two reasons. MDF is more dimensionally stable and more load resistant than plywood.</p>
 
-<tr>
-  <td><img src="Images/Cad/Turrent7.png" style="width:300px "></td>
-  <td>
+            </td>
+        </tr>
+      </table>
 
-    <p>I extended the surface of the plaform to mount the gun. I went with 140 mm lenght and 80 mm width. Since the nerf magazines
-    itself is around 80mm long, so I had to add additional room for the flywheels and pusher.</p>
-
-  </td>
-</tr>
-
-<tr>
-<td><img src="Images/Cad/Turrent8.png" style="width:300px "></td>
-<td>
-
-  <p>With the Turret done, I added the holes used for the LCD, rotary encoder and rocker swtich.</p>
-
-</td>
-</tr>
-
-<tr>
-<td><img src="Images/Cad/Gun1.png" style="width:300px "></td>
-<td>
-
-  <p>I created an additonal plane, this would act as the connecting piece between my turret and gun.</p>
-
-</td>
-</tr>
-
-<tr>
-<td><img src="Images/Cad/Gun2.png" style="width:300px "></td>
-<td>
-
-  <p>I imported the cad model of a flywheel cage from grabcad.com and aligned the barrel with the centre of the piece.</p>
-
-</td>
-</tr>
-
-<tr>
-<td><img src="Images/Cad/Gun3.png" style="width:300px "></td>
-<td>
-
-  <p>I then created the slots of the magazine holder.</p>
-
-</td>
-</tr>
-
-<tr>
-<td><img src="Images/Cad/Gun5.png" style="width:300px "></td>
-<td>
-
-  <p>Once the slots are created, I made the holder.</p>
-
-</td>
-</tr>
-
-<tr>
-<td><img src="Images/Cad/Gun7.png" style="width:300px "></td>
-<td>
-
-  <p>Then I created a 17mm cross. Based on measuring a nerf dart, this ousher has a bigger diameter than
-  the dart which can allow me to push it easily. I used a cross pattern as since it will be able to move
-  more closely along the path I made for it. </p>
-
-</td>
-</tr>
-
-<tr>
-<td><img src="Images/Cad/Gun8.png" style="width:300px "></td>
-<td>
-
-  <p>I add a servo motor mount and then connected the two together. </p>
-
-</td>
-</tr>
-
-<tr>
-<td><img src="Images/Cad/Gun9.png" style="width:300px "></td>
-<td>
-
-  <p>I created a box around the gun.</p>
-
-</td>
-</tr>
-
-<tr>
-<td><img src="Images/Cad/Gun10.png" style="width:300px "></td>
-<td>
-
-  <p>Since there is still some extra room left in front of the flywheel, I added a barrel to guide the bullet.</p>
-
-</td>
-</tr>
-
-<tr>
-<td><img src="Images/Cad/Gun10.png" style="width:300px "></td>
-<td>
-
-  <p>Since there is still some extra room left in front of the flywheel, I added a barrel to guide the bullet.</p>
-
-</td>
-</tr>
-
-<tr>
-<td><img src="Images/Cad/DartLauncher.png" style="width:300px "></td>
-<td>
-
-  <p>After finishing the gun, I reattach it to the base. In Conclusion, you should double check your orientation of your Cad model. Since I did not check,
-  my model has a slight error where the gun faces the user. The Cad model for these files can be found in my github site, along with the DXF files used for laser cutting.</p>
-
-</td>
-</tr>
-
-</table>
-<h4>Coding:</h4>
-<table style="width:100%">
-<tr>
-  <th>Example</th>
-  <th>Explaination</th>
-</tr>
-
-<tr>
-<td>
-<img src="Images/Code/Coding1.png" style="width:100% ">
-</td>
-
-<td>
-<p>To begin coding, I need to explain the different libraries I used and what purpose they serve.</p>
-<ul>
-  <li>Servo.h</li>
-  <ul>
-    <li>Servo.h is a library that simplifes the code used while controlling a servo.
-    </li>
-  </ul>
-
-  <li>Wire.h</li>
-  <ul>
-    <li>Wire.h is a library that allows you to communicate with I2C / TWI devices. On the Arduino boards with the R3 layout (1.0 pinout), the SDA (data line) and SCL (clock line) are on the pin headers close to the AREF pin.
-    </li>
-  </ul>
-
-  <li>LiquidCrystal_I2C.h</li>
-  <ul>
-    <li>LiquidCrystal_I2C.h allows communication with alphanumerical liquid crystal displays (LCDs).
-    </li>
-  </ul>
-
-  <li>ArduinoTrace.h</li>
-  <ul>
-    <li>ArduinoTrace.h gives me the ablilty to trace the output of different variables I set up. This comes in handy when I want
-      to find if the servo code is working or not. I maninly use it to track the movement of my rotary switch so I track if there is debounce.
-    </li>
-  </ul>
-
-</ul>
-
-<p>Since I am using a rotary encoder, I would have to define which pins it uses so the arduino knows which pin to get the data from.</p>
-<ul>
-  <li>SW PIN 4: SW is the button on the rotary encoder.</li>
-  <li>DT PIN 5: DT is the signal detected when you turn the encoder clockwise.</li>
-  <li>CLK PIN 6: CLK is the signal detected when you turn the encoder anti-clockwise.</li>
-</ul>
-</td>
-</tr>
-
-<tr>
-<td>
-<img src="Images/Code/Coding2.png" style="width:100% ">
-</td>
-<td>
-<p>The 'Debounce' part is used in my programe to prevent the rotary encoder from giving inconsistent results.</p>
-</td>
-</tr>
-
-  <tr>
-
-
-    <td><img src="Images/Code/Bounce.gif" style="width:300px "></td>
-
-    <td><p>As shown with this gif, without adding Debounce, the rotary encoder gives inconsistent results.</p>
-
-    </td>
-</tr>
-
-<ul>
-  <li>In order to add debounce to all of the inputs of the Rotary Encoder, I would have to reapeat it 3 times.</li>
-  <li>The debounceDelay variable allows me to change the timing of debounce delay of the code making it easier to modify the value.</li>
-</ul>
-
-<tr>
-
-<td><img src="Images/Code/Coding3.png" style="width:300px "></td>
-<td><p>This is what the rest of the debounce code looks like and I would repeat it for the both DT and CLK.</p></td>
-
-
-</tr>
-
-<tr>
-<td><img src="Images/Code/Coding4.png" style="width:300px  "></td>
-<td><p>This part of my code shows the different screens the LCD will display. To show the different state the launcher was in. 0 being the value when the launcher starts up.
-1 being the state where you control the X axis. 2 for the Y axis. 3 tells the servo pusher to push the dart. 4 retracts the servo to its original postition.</p></td>
-</tr>
-
-<tr>
-<td><img src="Images/Code/Coding5.png" style="width:300px "></td>
-<td><p>This is the part where the moving clockwise on the rotary encoder changes the angle. This part increases the angle. I set it to 10 and 170 as the servo motor has some issues going from 0 to 180.</p></td>
-</tr>
-
-<tr>
-<td><img src="Images/Code/Coding6.png" style="width:300px "></td>
-<td><p>This part is simliar to the perivous picture. However it decreases the angle instead.</p></td>
-</tr>
-</table>
-<h4>Fabrication</h4>
-<p>While fabricating the different piece of the dart launcher, I decided to make some changes to the original design.</p>
-  <ul>
-    <li>I addded a "tray"</li>
-    <li>I decided not to laser cut the housing around the dart launcher</li>
-    <li>I had to increase the height of the magazine holder</li>
-  </ul>
-
-
+      <h3>Fabrication:</h3>
   <table style="width:100%">
   <tr>
     <th>Image</th>
     <th>Explaination</th>
   </tr>
 
-    <tr>
-      <td><img src="Images/Fab/tray.png" style="width:300px "></td>
+  <tr>
+    <td><img src="EP1001PIC/PCB1.jpg" style="width:300px "></td>
 
-      <td>The Original idea for to add a tray was to allow me to get and easier access to my wiring and electronic compoents once I assmeble the base. Since I would
-        not have to remove the turret and gun just to check or modify the wiring. However, due to my ignorance, when I later began testing if all of the compoents fit, I realised the push button and LCD was preventing the base from closing as it was hitting the tray.
-      </td>
+    <td><h4>PCB Fabrication.</h4>
+      The PCB shown in this picture is for an ATmega328p. It looks very clean and the entire process of making this board was a learning experience with many trials and errors.
+    </td>
   </tr>
 
   <tr>
-    <td><img src="Images/Fab/Tray2.jpg" style="width:300px "></td>
+    <td><img src="EP1001PIC/PCB2.jpg" style="width:300px "></td>
 
-    <td>The main issue that stem when adding a tray is the dimension I used for it. I did not leave any tolerance. This meant that it was a perfect fit which caused
-      it to has trouble opening. I had to use a file and file down the tray to give me some wiggle room to properly use it. This did not solve the problem but it was a small patch to an issue. I would later saw off the wall as it was getting in my way from wiring.
+    <td>
+      Error 1: Sercure the PCB properly, since the PCB uses 0.15 mil traces I had to be precise. I cannot afford simple mistakes like this where the piece came lose. Additionally it helps by taping up the sides to properly sercure it.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="EP1001PIC/PCB3.jpg" style="width:300px "></td>
+
+    <td>
+      Error 2: Use proper tool bits. this mistake was made when I used a already blunt tool bit. Although it was difficult to tell what tool bit I was using after cutting for a while I realised the traces were too big and had to restart.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="EP1001PIC/PCB4.jpg" style="width:300px "></td>
+
+    <td>
+      Error 3: Proper settings. Due to how accurate the milling had to be for the ATmega328p, I had to increase the spindle speed and decrease the feed rate for a more accurate cut. However this comes at a lost. The tool bit by wear off faster so it
+      maybe handy to keep some spares on hand or adjust the Z axis bit by bit.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="EP1001PIC/PCB5.jpg" style="width:300px "></td>
+
+    <td>
+      After learning from all my mistakes, I managed to properly mill the PCB board!
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="EP1001PIC/PCB6.jpg" style="width:300px "></td>
+
+    <td>
+      Lasty, don't forget to give the board a proper sanding to remove the bur on the pad so it helps with soldering. Use a wire brush to remove the copper dust trapped between the traces and rinse it with water and soap to clean it. (Yes it helps.)
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="EP1001PIC/PCB7.jpg" style="width:300px "></td>
+
+    <td>
+      Soldering on the ATmega328p for the PCB. I found out getting the corner pins helps with soldering. Due to how small the traces are it is best to use as little solder as possible.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="EP1001PIC/PCB8.jpg" style="width:300px "></td>
+
+    <td>
+      I made a mistake with my PCB design I used a smaller tab for my osicallator clock so the 16 MHz clock does not fit.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="EP1001PIC/PCB9.jpg" style="width:300px "></td>
+
+    <td>
+      I was given a 20MHz clock, I was told it should not affect much I just have to change bits of the code and the settings under tool.
+    </td>
+  </tr>
+
+  <tr>
+    <td><img src="EP1001PIC/PCB10.jpg" style="width:300px "></td>
+
+    <td>
+      Final PCB. I realised I forgot to add addtional 5v and GND pins for to power the CNC motor shield so I would have to solder wires for that. I only need 7 pins  X, Y, Z Step and Dir and enable. Pins 0 & 1 are my RX TX so they
+      can't be touched. That leaves me with 4 unused pins with is good as they can serve as backup pins incase one of the existing pins break. I made a mistkae on pin 7 where parts of the traces is not stuck to the board. Although I have fixed it for now,
+      I still have 4 backup pins to use in case it breaks.
+    </td>
+  </tr>
+
+  <tr>
+      <td><img src="EP1001PIC/cncprep1.jpg" style="width:300px"></td>
+
+      <td><img src="EP1001PIC/cncprep2.jpg" style="width:300px  "></td>
+  </tr>
+
+  <tr>
+    <td><img src="EP1001PIC/cncprep3.jpg" style="width:300px "></td>
+
+    <td><h4>CNC Milling</h4>
+      <p>Since MDF was stronger than plywood, I had to increase the feed rate to ensure a smoother cut.</p>
     </td>
 </tr>
 
 <tr>
-  <td><img src="Images/Fab/newpusher.png" style="width:300px "></td>
+  <td><img src="EP1001PIC/cncprep4.jpg" style="width:300px "></td>
 
-  <td>I decided not to fabricate the hosuing for the dart launcher as my preivous design for the pusher was too big. It wasn't able to push it dart. So I had to
-    extend it by an addtional 20mm for it to work. I also shaved off 4 mm from the top to allow the other darts in the magazine to feed in better. This resulted in the pusher being too big and I could
-    either redesign the house and fabricate or just leave it without the housing. As I was running out of time I deceided not to create the housing as I felt that it would just only added to the weight of the launcher.
+  <td>All 9 pieces finished fabrication. I made an addtional piece for me to cut during a demo.
   </td>
 </tr>
 
-<tr>
-  <td><img src="Images/Fab/magEx1.jpg" style="width:300px "></td>
-
-  <td>I discovered I misjudge the height of the magazine and thus the pusher had difficult feeding as the dart would always hit the edge of the flywheel cage instead of going into the hole. Therefore, I creaeted
-    several rectangles with the same lenght and breath as the magazine using 3 mm plywood.
-  </td>
-</tr>
-
-<tr>
-  <td><img src="Images/Fab/MagEx2.jpg" style="width:300px "></td>
-
-  <td>Since I was about 9mm off. I fabriacted 3 of them and glued them together before pasting them onto the top the of the magazine holder to extend the height.
-  </td>
-</tr>
-
-<tr>
-  <td><img src="Images/Fab/Aline.jpeg" style="width:300px "></td>
-
-  <td>With the modified height, the magazine is now a lined with the flywheel.
-  </td>
-</tr>
 
   </table>
 
 <h4>Intergration</h4>
-<p>Intergration became one of the hardest part of my project. This is due to my changes in design during fabrication affecting my previous design which I did not account for. This resulted in me spending my time to modify existing pieces to get it to work together.</p>
+<p>Intergration is the hardest part of any projects. I learnt from my last EP1000 projects not to make any jurassic last minute changes so the process was abit smoother and less stressful.</p>
 
 <table style="width:100%">
 <tr>
@@ -627,37 +447,44 @@
 </tr>
 
   <tr>
-    <td><img src="Images/tnt/wire.jpeg" style="width:300px "></td>
+    <td><img src="EP1001PIC/int1.jpg" style="width:300px "></td>
 
-    <td>Due to how short the wires I was using are, it was very difficult to wire it all up as I had very little room to work with. The dimension of the tray also played an annoying role here. As
-      I realised while assembling it, the walls of the tray was pushing against the rotary encoder, rocker swtich and LCD. I had to saw off parts of the tray to make room and that created more issues
-      as I already screwed the ardiuno to the board and glued the breadboard. Needless to say, I got it done but I had used up too much of my time.
+    <td>Spindle Carraige Assembly Prep
+      <ul>
+        <li>X - Axis Carriage</li>
+        <li>Spindle Holder</li>
+        <li>Nema 17 stepper Motor</li>
+        <li>5 to 8 rod apdater</li>
+        <li>2 X 12mm by 120mm Steel Rods</li>
+        <li>120 mm Lead Screw</li>
+        <li> *Not in the photo* 608 bearing fitted into the base of the Carraige</li>
+      </ul>
     </td>
 </tr>
 
 <tr>
-  <td><img src="Images/tnt/MotorRest.jpeg" style="width:300px "></td>
+  <td><img src="EP1001PIC/int2.jpg" style="width:300px "></td>
 
-  <td>Additionally, I had a wiring issue with the motors where they would reset the arduino when I acitvated them. In order to prevent this from happening, I would have to increase the current flowing through the circuit.
+  <td>I found out one of the ways to fit the bearaings into the part is to use a vice to push it in.
   </td>
 </tr>
 
 <tr>
-<td><img src="Images/tnt/TestServo.gif" style="width:300px "></td>
+<td><img src="EP1001PIC/int3.jpg" style="width:300px "></td>
 
-<td>Testing the Servo's ability to control the turret. The movement was bit janky as there was a small delay between the rotary moving and the servo moving.</td>
+<td>Testing the rod fitting into the carraige</td>
 </tr>
 
 <tr>
-<td><img src="Images/tnt/Push.gif" style="width:300px "></td>
+<td><img src="EP1001PIC/int4.jpg" style="width:300px "></td>
 
-<td>Testing the Servo's ability to push the bullet from the magazine</td>
+<td>Testing the stepper if it fits into the rod</td>
 </tr>
 
 <tr>
-<td><img src="Images/tnt/bullet.gif" style="width:300px "></td>
+<td><img src="EP1001PIC/int5.jpg" style="width:300px "></td>
 
-<td>Testing if the flywheel mechanism work. The dart launcher fires the dart. Although the flywheel system was very large.</td>
+<td>X and Z axis carraige complete..</td>
 </tr>
 
 <tr>
@@ -692,21 +519,6 @@ attach it to the servo horn as the additional lenght will cause the ball bearing
 <td>With everything attach together, it now works !</td>
 </tr>
 
-</table>
-
-<h4> Preview </h4>
-<table style="width:100%">
-<tr>
-  <th>Test Fire</th>
-  <th>Firing a full 6 shot magazine</th>
-</tr>
-
-  <tr>
-    <td><iframe width="560" height="315" src="https://www.youtube.com/embed/nVf0ZSj8GF0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
-
-    <td><iframe width="560" height="315" src="https://www.youtube.com/embed/GNNfKkBNALs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    </td>
-</tr>
 </table>
 
 <h4>Reflection</h4>
