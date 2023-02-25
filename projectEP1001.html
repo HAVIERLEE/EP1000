@@ -26,6 +26,20 @@
           <a href="Blog/Arduino.html">Arduino Test Log</a>
           <a href="Blog/Printing1.html">3D Printing Attempts</a>
         </div>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">EP1001
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="EP1001/Electronics.html">Electronics Production & Assignment</a>
+          <a href="EP1001/ElectronicsD.html">Electronics Design</a>
+          <a href="EP1001/CNC.html">2D Computer Controlled Machining</a>
+          <a href="EP1001/Embedded.html">Embedded Programming</a>
+          <a href="EP1001/Moldcast.html">Molding & Casting</a>
+          <a href="EP1001/Machining.html">3D Machining</a>
+          <a href="EP1001/Interface.html">Interface & Applications Programming</a>
+        </div>
+        </div>
         </div>
         <div class="dropdown">
         <button class="dropbtn" onclick="myFunction()">Guide
@@ -58,18 +72,21 @@
           <h4> Preview </h4>
           <table style="width:100%">
           <tr>
-            <th>Test Cut</th>
+            <th>Presentation Slide</th>
             <th>1 Min Video</th>
           </tr>
 
             <tr>
-              <td><iframe width="560" height="315" src="https://www.youtube.com/embed/nVf0ZSj8GF0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+              <td><img src="EP1001PIC/presentation.png" width="560" height="315"></td>
 
-              <td><iframe width="560" height="315" src="https://www.youtube.com/embed/GNNfKkBNALs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <td><iframe width="560" height="315" src="https://www.youtube.com/embed/rZxKXIcD22U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </td>
           </tr>
           </table>
-
+          <h4> Project Download link</h4>
+          <a href="/EP1001Project" download>
+            <img src="/images/myw3schoolsimage.jpg" alt="test">
+          </a>
 
           <table style="width:100%">
           <tr>
@@ -137,10 +154,16 @@
               <td>~$30</td>
             </tr>
             <tr>
-              <td>5</td>
               <td>6</td>
-              <td>12mm X 57mm Bearings</td>
+              <td>6</td>
+              <td>12mm X 57mm Linear Bearings</td>
               <td>$76.90</td>
+            </tr>
+            <tr>
+              <td>7</td>
+              <td>6</td>
+              <td>608 Ball Bearings</td>
+              <td>$6.00</td>
             </tr>
           </table>
 
@@ -308,11 +331,7 @@
               </td>
           </tr>
 
-
-
           <tr>
-
-
             <td><img src="EP1001PIC/mdfvsply.jpg" style="width:300px "></td>
 
             <td><h4>Base Material Comparsion</h4>
@@ -322,6 +341,104 @@
             </td>
         </tr>
       </table>
+
+      <h3>PCB Design</h3>
+      <table style="width:100%">
+      <tr>
+        <th>Example</th>
+        <th>Explaination</th>
+      </tr>
+
+      <tr>
+      <td>
+      <img src="EP1001PIC/chips.jpg" style="width:450px ">
+      </td>
+      <td>
+        <p>
+          <h4>Choosing a Chip to use</h4>
+        Before I began making the PCB, I had to decide what microcontroller to use. My mentor advice me to pick of the 4 microcontrollers to use.
+          <ul>
+            <li>Wroom ESP32
+            <li>ESP8266G
+            <li>Atiny3216
+            <li>ATmega328
+          </ul>
+
+          Each of these vary in specs and some like the ESP32 has wifi capabilites. I chose to use the ATmega328p because the code I am using GRBL is made to run on an arduino microntroller.
+        </p>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      <img src="EP1001PIC/ATmegasch1.png" style="width:450px ">
+      </td>
+      <td>
+        <p>
+          <h4>Creating a design for the ATmega328</h4>
+        For the ATmega328 schematic I had to design, I had to include certain parts for the chip to work. These are
+          <ul>
+            <li>A crystal oscillator
+            <li>Reset button
+          </ul>
+          As shown in the picture on the side this is my design for the Atmega328. Some of the pins are not pined out because I did not find these chips necessary for my CNC machine as they are analog pins and my code only needs
+          digital.
+        </p>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      <img src="EP1001PIC/ATmegasch2.png" style="width:450px ">
+      </td>
+      <td>
+        <p>
+          This is my PCB board design I have all the digital pins, a reset button and a crystal oscillator.  I even labelled the pins so I know which pins I am looking at. I had to keep the Mosi, Miso and SCK pins to progarm the board.
+          and the RX and TX pins for the serial port.
+        </p>
+      </td>
+      </tr>
+
+  </table>
+
+  <h3>Code Explaination</h3>
+  <table style="width:100%">
+  <tr>
+    <th>Picture</th>
+    <th>Explaination</th>
+  </tr>
+
+  <tr>
+  <td>
+  <img src="EP1001PIC/grbl2.png" style="width:450px ">
+  </td>
+  <td>
+    <p>
+      For grbl, I had to configure parts of the code used for my CNC machine. The way these settings are configured is through the serial monitor.
+       These settings are applied differently depending on the machine. Thus I had to do some trial an error for the code.
+      I managed to a narrow down 3 settings that I had to change for my CNC machine to work and modified them with the following values.
+      <ul>
+        <li>$100 = 400
+        <li>$101 = 400
+        <li>$102 = 400
+      </ul>
+      These values represent the microstepping of the CNC machine which is important for the CNC machine as it is how much the stepper motor moves. Depending on the resolution of the stepper motors I would have to change them.
+    </p>
+  </td>
+  </tr>
+
+  <tr>
+  <td>
+  <img src="EP1001PIC/ugs.png" style="width:450px ">
+  </td>
+  <td>
+    <p>
+      To control the CNC machine, I use Universal G-code sender. Unversal G-code sender is a free software that I use to control the CNC machine, it communicates with the machine via by using the ATmega328's serial port.
+    </p>
+  </td>
+  </tr>
+
+</table>
 
       <h3>Fabrication:</h3>
   <table style="width:100%">
@@ -488,62 +605,126 @@
 </tr>
 
 <tr>
-<td><img src="Images/tnt/TestFull.gif" style="width:300px "></td>
+<td><img src="EP1001PIC/int6.jpg" style="width:300px "></td>
 
-<td>Once Fully tested and assembled, I tested if the launcher worked with when moving the X axis. Unfortunatly, it the Y axis servo isn't able to grip on to
-the launcher.</td>
+<td>Testing if the Z Axis carraige can move along the Y axis.</td>
 </tr>
 
 <tr>
-<td><img src="Images/tnt/TempFix.jpeg" style="width:300px "></td>
+<td><img src="EP1001PIC/int7.jpg" style="width:300px "></td>
 
-<td>As a temporary fix, I hotglued the mount to the servo. This caused a bigger issue. As the mount was unable to move since the Y axis motor becamed jammed with hotglue. I wasn't able to
-attach it to the servo horn as the additional lenght will cause the ball bearing to not fix into the slot I made for it.</td>
+<td>Assembling the X Axis Carraige I placed a bearing inside non motor holder mount to support the lead screw.</td>
 </tr>
 
 <tr>
-<td><img src="Images/tnt/sec.jpeg" style="width:300px "></td>
+<td><img src="EP1001PIC/int8.jpg" style="width:300px "></td>
 
-<td>As I was cleaning up the hotglue from the servo motor, I made a realisation, that I could fit the dart launcher with a servo horn if I attach the screw hole of the sevo motor behind the wall.</td>
+<td>Assembling the power supply.</td>
 </tr>
 
 <tr>
-<td><img src="Images/tnt/servo2horn.jpeg" style="width:300px "></td>
+<td><img src="EP1001PIC/int19.jpg" style="width:300px "></td>
 
-<td>To implement this fix, I screwed the servo horn on to the servo to increase its grip. With the addition size of the screw, I fitted it into the mount and hotglue it together. The picture shows my final result.</td>
+<td>This is the power supply assembled with a thicker gauge wire to handle the 24 volts.</td>
 </tr>
 
 <tr>
-<td><img src="Images/tnt/6.jpeg" style="width:300px "></td>
+<td><img src="EP1001PIC/int9.jpg" style="width:300px "></td>
 
-<td>With everything attach together, it now works !</td>
+<td>I had to assemble the CNC Driver Shield and tune the voltage to meet the stepper motor requirements. The yellow cricle highlights the part where I have to screw the change the voltage. To test the volatge
+I had to use a mutlimeter and place one end on GND and another one the screw itself.</td>
+</tr>
+
+<tr>
+<td><img src="EP1001PIC/int11.jpg" style="width:300px "></td>
+
+<td>I was not able to get the datasheet for the stepper motor so as a precaution I set it to the voltage shown here.</td>
+</tr>
+
+<tr>
+<td><img src="EP1001PIC/int10.jpg" style="width:300px "></td>
+
+<td>This is the CNC machine fully assembled.</td>
+</tr>
+
+<tr>
+<td><img src="EP1001PIC/CNCtest.gif" style="width:450px "></td>
+
+<td>Using arduino uno to test the code for the CNC.</td>
+</tr>
+
+<tr>
+<td><img src="EP1001PIC/int12.jpg" style="width:300px "></td>
+
+<td>Using an ISP progarmmer to progarm my board.</td>
+</tr>
+
+<tr>
+<td><img src="EP1001PIC/int14.jpg" style="width:300px "></td>
+
+<td>Getting errors and difficulties with progarmming the board.</td>
+</tr>
+
+<tr>
+<td><img src="EP1001PIC/int13.jpg" style="width:300px "></td>
+
+<td>I borrowed a diiferent PCB with an ATemga328. This is identical to an Arduino uno.</td>
+</tr>
+
+<tr>
+<td><img src="EP1001PIC/int15.jpg" style="width:300px "></td>
+
+<td>A bootloader is installed so I can progarm it with my FTDI PCB.</td>
+</tr>
+
+<tr>
+<td><img src="EP1001PIC/int16.jpg" style="width:300px "></td>
+
+<td>Running the test code worked.</td>
+</tr>
+
+<tr>
+<td><img src="EP1001PIC/int17.jpg" style="width:300px "></td>
+
+<td>Swiching the header from the arduino with the PCB</td>
+</tr>
+
+<tr>
+<td><img src="EP1001PIC/int18.jpg" style="width:300px "></td>
+
+<td>Testing the board with grbl uploaded.</td>
 </tr>
 
 </table>
 
+<h4>Issues Faced.</h4>
+<p>During intergration, I encountered an issue with the board itself. When I was testing the machine, I used an arduino to test if it works and it did. However, when I would use the board, the machine would not even move. Which was an
+  issue since I was not able to get it to work the way I intended. To troubleshoot this issue, I created a test code to test if it was the chip problem or the stepper drvier issue.
+
+  The picture shown below is the test code I used to troubleshoot the machine.
+</p>
+
+<img src="EP1001PIC/steppertest1.png" style="width:600px ">
+<p>The code was simple, it told which axis the stepper motor was connected to move a certain distance and then told it to go in reverse afterwards. Then it would change which axis of the stepper motor it would control.
+</p>
+
+<img src="EP1001PIC/steppertest.gif" style="width:600px ">
+
+<p>It worked.</p>
+<p>Unfortunately, I was not able to debug the issue.</p>
+
 <h4>Reflection</h4>
-  <img src="Images/tnt/Final.jpeg" style="width:600px ">
-<p>After finish assembling the nerf dart launcher I learnt I alot of valuable advice. The lack of proper time management was one of them, this was due to my indecision to modify my base to add a plate. The change cost my more time asI had to readjust the placement of all the componets.
-  and when it all still didn't fit, I had to modify the tray itself which took up more time then I indeed and planned for. In summary:</p>
-<ul>
-  <li>Creating a cardboard Mock up of your idea usually helps. This gives you a general sense of how your product is going to look like and you can make any modifications easily as it is cardboard.</li>
-  <li>Only change your design when you need to. I already had the base fabriacted and it whave worked with all the compoents put in place. Yet I thought a tray would be better and conviced myself so. In the end I paid the price for it as I had to deal with the unintended consequences of it. Which cost me tons of my valuable time.</li>
-</ul>
-
-<p>Additional changes I would have made:</p>
-<ul>
-  <li>Creating a smaller turrent mount for the launcher. This reduces the overall weight on the servo. Which might allow it to move better.</li>
-  <li>Minimzing the launcher. Although I found out that the launcher was larger than it was suppose to be. It could be much more thinner, as I hard a alot of spare room in the housing.</li>
-</ul>
-<p>In Conclusion, I have learnt alot from this project helping boost my personal experience. I enjoyed this module as I always loved to make stuff and this inspired to try doing more of it in my free time. Although my project isn't 100% what it was at the start, I believe that it gave my a better understanding myself and teach me an important lesson on both Design and Fabrication. </p>
-
-<h3>1 minute project video:</h3>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/1FFB7ECubdk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <img src="EP1001PIC/final.jpg" style="width:600px ">
+<p>After finishing this project, I managed to pick up some useful advice. The scope of my project was too big to work on for this module. If I had more time I would have assembled the CNC machine sooner and discovered the board issue.
+  However I was not able to do it on time. Some additional changes I would have made were the ability to have different spindle mounts as the one I was using was only worked with the dereml I was using.
+</p>
+<p>In Conclusion, I've learnt alot from this project. It was quite the leap from my preivous EP1000 project and I certainly gotten alot more new experiences. I never thought I would have make a CNC machine in 4 weeks let alone
+  see it actaully work. The time spent on this module was the most fun I had in quite sometime and I am not going to stop making stuff. After this module, I will find sometime to improve on my machine.
         </div>
       </div>
     </div>
     <div id="footer">
-        Copyright &copy; 2021 Javier Lee.
+        Copyright &copy; 2022-2023 Javier Lee.
     </div>
 
 
