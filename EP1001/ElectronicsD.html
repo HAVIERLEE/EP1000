@@ -36,12 +36,12 @@
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content" id="myDropdown">
-          <a href="../EP1001/Electronics.html">Electronics Production & Assignment</a>
+          <a href="../EP1001/Electronics.html">Electronics Production</a>
           <a href="../EP1001/ElectronicsD.html">Electronics Design</a>
           <a href="../EP1001/CNC.html">2D Computer Controlled Machining</a>
           <a href="../EP1001/Embedded.html">Embedded Programming</a>
           <a href="../EP1001/Moldcast.html">Molding & Casting</a>
-          <a href="../EP1001/Machining.html">3D Machining</a>
+
           <a href="../EP1001/Interface.html">Interface & Applications Programming</a>
         </div>
         </div>
@@ -59,6 +59,7 @@
         </div>
         <a href="../tooltable.html">Tool Table</a>
         <a href="../project.html">Final Project</a>
+        <a href="projectEP1001.html">EP1001 Final Project</a>
       </div>
       <div id="main">
         <div id="aaa">
@@ -66,111 +67,200 @@
           <p>This section of the blog talks about what I learnt about PCB Design. Before we start on the design, we have to use a software to design the PCB, I chose to use Autodesk Eagle, which is
           a software used to design the PCB. The table below will show the entire design process I took to create the PCB. The list of materials will be at the bottom of the page.
           </p>
+          <h3 style="color:LightGray;">Electronics Design</h3>
+          <p>At this point after learning about Electronic production, we have to do the electronic design for the PCB. I will be designing a 'hello World Board' using an ATtiny412.
+          </p>
 
           <table style="width:100%">
-            <tbody>
-            <!-- Heading -->
-            <tr>
-              <th>Image Step</th>
-              <th>Explanation</th>
-            </tr>
-            <!-- Step 1-->
-              <tr>
-                <!-- Image -->
-                <td>
-                  <img src="Electronics/etching.jpg" style="width:100%">
-                </td>
-                <!-- Explanation -->
-                <td>
-                    <p>To get started on coding an arduino, you will of course need an arduino. My school provided us with an Arduino Uno to use, but you can use similar arduino boards. The sceond most impoartant thing you will need is a breadboard. Although you can make these circuits without a arduino board,
-                      a breadboard will certainly help with the standardization. Lastly you will need the componets such as wires, LEDs, resistors and push button switch.
-                    </p>
-                </td>
-            </tr>
-
-            <!-- Step 2 -->
-              <tr>
-                <!-- Image -->
-                <td>
-                  <img src="Electronics/machining.jpg" style="width:100%">
-                </td>
-                <!-- Explanation -->
-                <td>
-                    <p>To get started on coding an arduino, you will of course need an arduino. My school provided us with an Arduino Uno to use, but you can use similar arduino boards. The sceond most impoartant thing you will need is a breadboard. Although you can make these circuits without a arduino board,
-                      a breadboard will certainly help with the standardization. Lastly you will need the componets such as wires, LEDs, resistors and push button switch.
-                    </p>
-                </td>
-            </tr>
-
-            <!-- Step 3 -->
-              <tr>
-                <!-- Image -->
-                <td>
-                  <img src="Electronics/Vinyl.jpg" style="width:100%">
-                </td>
-                <!-- Explanation -->
-                <td>
-                    <p>To get started on coding an arduino, you will of course need an arduino. My school provided us with an Arduino Uno to use, but you can use similar arduino boards. The sceond most impoartant thing you will need is a breadboard. Although you can make these circuits without a arduino board,
-                      a breadboard will certainly help with the standardization. Lastly you will need the componets such as wires, LEDs, resistors and push button switch.
-                    </p>
-                </td>
-            </tr>
-
-            <!-- Table data 4: Laser Cutting -->
-              <tr>
-                <!-- Image -->
-                <td>
-                  <img src="Electronics/lasercutting.jpg" style="width:100%">
-                </td>
-                <!-- Explanation -->
-                <td>
-                    <p>To get started on coding an arduino, you will of course need an arduino. My school provided us with an Arduino Uno to use, but you can use similar arduino boards. The sceond most impoartant thing you will need is a breadboard. Although you can make these circuits without a arduino board,
-                      a breadboard will certainly help with the standardization. Lastly you will need the componets such as wires, LEDs, resistors and push button switch.
-                    </p>
-                </td>
-            </tr>
-
-            <!-- Table data 5: Printing -->
-              <tr>
-                <!-- Image -->
-                <td>
-                  <img src="Electronics/printing.jpg" style="width:100%">
-                </td>
-                <!-- Explanation -->
-                <td>
-                    <p>To get started on coding an arduino, you will of course need an arduino. My school provided us with an Arduino Uno to use, but you can use similar arduino boards. The sceond most impoartant thing you will need is a breadboard. Although you can make these circuits without a arduino board,
-                      a breadboard will certainly help with the standardization. Lastly you will need the componets such as wires, LEDs, resistors and push button switch.
-                    </p>
-                </td>
-            </tr>
-
-            <!-- Table data 6: Sewing -->
-              <tr>
-                <!-- Image -->
-                <td>
-                  <img src="Electronics/Sewing.jpg" style="width:100%">
-                </td>
-                <!-- Explanation -->
-                <td>
-                    <p>To get started on coding an arduino, you will of course need an arduino. My school provided us with an Arduino Uno to use, but you can use similar arduino boards. The sceond most impoartant thing you will need is a breadboard. Although you can make these circuits without a arduino board,
-                      a breadboard will certainly help with the standardization. Lastly you will need the componets such as wires, LEDs, resistors and push button switch.
-                    </p>
-                </td>
-            </tr>
-
-
-
-          </tbody>
+          <tr>
+            <th>Compoents</th>
+            <th>Quantity</th>
+          </tr>
+          <tr>
+            <td>ATtiny412</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>10kΩ resistor</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td> 1x 6 SMD Female Header</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td> 1x 3 SMD Male Header</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>6mm Button</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>1uF capacitor</td>
+            <td>1.</td>
+          </tr>
+          <tr>
+            <td>LED</td>
+            <td>1</td>
+          </tr>
           </table>
-          <!-- End of table -->
 
-          <p>For the assignment we will be using the maching method to do our PCB fabrication.
-          </p>
+          <table style="width:100%">
+            <tr>
+              <th>Picture</th>
+              <th>Explaination</th>
+            </tr>
 
-          <h3 style="color:LightGray;">Electronics Design</h3>
-          <p>At this point after learning about Electronic production, we have to do the electronic design for the PCB. You can view how I did the <a href="EP1001/ElectronicsD.html">Electronics Design</a> over here.
-          </p>
+            <tr>
+              <td><img src= "Electronics/ed3.png" style="width:300px height:300px "></td>
+              <td>
 
+                <p>Before i start I need to show which part of the side bar does what. The Net tool will be the most used tool as you would use it to conenct the componets together.</p>
+
+              </td>
+            </tr>
+
+            <tr>
+              <td><img src= "Electronics/ed4.png" style="width:300px height 300px"></td>
+              <td>
+
+                <p>To add parts, go to this icon on the side bar.</p>
+
+              </td>
+          </tr>
+
+          <tr>
+            <td><img src= "Electronics/ed8.png" style="width:300px height 300px"></td>
+            <td>
+
+              <p>This page would show up. Using the '*' key would allow you to search partical names.</p>
+
+            </td>
+          </tr>
+
+              <tr>
+                <td><img src= "Electronics/ed.png" style="width:450px "></td>
+                <td>
+
+                  <p>This shows the ATTiny412 design I have made with all the compoents in it. As you can see I have placed all compoents onto the board.</p>
+
+                </td>
+            </tr>
+
+            <tr>
+              <td><img src= "Electronics/ed7.png" style="width:450px "></td>
+              <td>
+
+                <p>Before I begin with the design, I would have to first change the settings the wire size and clearence. I do that by selecting DRC.</p>
+
+              </td>
+          </tr>
+
+          <tr>
+            <td><img src= "Electronics/ed5.png" style="width:450px "></td>
+            <td>
+
+              <p>This setting changes the trace's size.</p>
+
+            </td>
+        </tr>
+
+        <tr>
+          <td><img src= "Electronics/ed6.png" style="width:450px "></td>
+          <td>
+
+            <p>This changes the distance between the traces.</p>
+
+          </td>
+      </tr>
+
+      <tr>
+        <td><img src= "Electronics/ed10.png" style="width:100px "></td>
+        <td>
+
+          <p>Once the settings are set, the highlighted bit is the auto router, this would automatically route all of your componets based on how and where you placed them.</p>
+
+        </td>
+    </tr>
+
+    <tr>
+      <td><img src= "Electronics/ed9.png" style="width:450px "></td>
+      <td>
+
+        <p>This is my result.</p>
+
+      </td>
+  </tr>
+
+
+
+          </table>
+          <p>This is my final result.</p>
+
+          <img src= "Electronics/ed2.png" style="width:100%">
+
+          <table style="width:100%">
+            <tr>
+              <th>Picture</th>
+              <th>Explaination</th>
+            </tr>
+
+            <tr>
+              <td><img src= "Electronics/HelloBoard_Trace.png" style="width:450px"></td>
+              <td>
+
+                <p>For this part, you would have to go to layers and hide all of them and only enable the pads and traces layer. Then export the file as a png with a dpi of 2000px. The picure shown would be the result.</p>
+
+              </td>
+            </tr>
+
+            <tr>
+              <td><img src= "Electronics/HelloBoard_Outlne.png" style="width:450px"></td>
+              <td>
+
+                <p>Same for the outline. However you would need to have an image editor to remove the black rectangle insde the box. I use gimp for this part. Once done it should look somthing like this picutre.</p>
+
+              </td>
+            </tr>
+
+            <tr>
+              <td><img src= "Electronics/mod.png" style="width:450px"></td>
+              <td>
+
+                <p>Next you will need to go to a website called 'mods'. This will allow you to turn your PNG into G-code so it can be read by the CNC machine. More about this on the eletronic production page. Once you get the G-code you send it to the CNC machine.</p>
+
+              </td>
+            </tr>
+
+            <tr>
+              <td><img src= "Electronics/ed11.jpg" style="width:450px"></td>
+              <td>
+
+                <p>The machine is cutting out my board.</p>
+
+              </td>
+            </tr>
+
+            <tr>
+              <td><img src= "Electronics/ed12.jpg" style="width:450px"></td>
+              <td>
+
+                <p>Next solder the compoents to the board.</p>
+
+              </td>
+            </tr>
+
+            <tr>
+              <td><img src= "Electronics/ed13.jpg" style="width:450px"></td>
+              <td>
+
+                <p>This is how the final board should look like.</p>
+
+              </td>
+            </tr>
+
+          </table>
 
 
       </div>

@@ -36,12 +36,12 @@
           <i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content" id="myDropdown">
-          <a href="../EP1001/Electronics.html">Electronics Production & Assignment</a>
+          <a href="../EP1001/Electronics.html">Electronics Production</a>
           <a href="../EP1001/ElectronicsD.html">Electronics Design</a>
           <a href="../EP1001/CNC.html">2D Computer Controlled Machining</a>
           <a href="../EP1001/Embedded.html">Embedded Programming</a>
           <a href="../EP1001/Moldcast.html">Molding & Casting</a>
-          <a href="../EP1001/Machining.html">3D Machining</a>
+
           <a href="../EP1001/Interface.html">Interface & Applications Programming</a>
         </div>
         </div>
@@ -67,17 +67,117 @@
 
           <h3 style="color:LightGray;">Electronics Production</h3>
           <p>Firstly, why do we need to learn about electronic production? Being able to customize your own electronics to meet your product's requirements allows you to have better control over it, allows
-          for greater reliablity and grants you the ability to prototype and iterate faster. This you to customize the footprint of your product allowing for better intergration.
+          for greater reliablity and grants you the ability to prototype and iterate faster. This you to customize the footprint of your product allowing for better intergration. There are a multitude of ways to
+          produce a PCB from milling to sewing. For this example, I will be milling the PCB.
           </p>
 
-          <h3 style="color:LightGray;">Electronics Design</h3>
-          <p>At this point after learning about Electronic production, we have to do the electronic design for the PCB. You can view how I did the <a href="EP1001/ElectronicsD.html">Electronics Design</a> over here.
-          </p>
+          <h3 style="color:LightGray;">Making a FTDI and UPD PCB</h3>
 
-          <h3 style="color:LightGray;">Assignement Making an In-Circuit Programmer</h3>
+          <table style="width:100%">
+          <tr>
+            <th>traces</th>
+            <th>outline</th>
+          </tr>
+          <tr>
+            <td><img src= "Electronics/ftdi_traces.png" style="width:450px "></td>
+            <td><img src= "Electronics/ftdi_outline.png" style="width:450px "></td>
+          </tr>
+          <tr>
+            <td><img src= "Electronics/updi_traces.png" style="width:450px "></td>
+            <td><img src= "Electronics/updi_outline.png" style="width:450px "></td>
+          </tr>
+          <tr>
+            <td>The above shows the traces and outlines I used for the production.</td>
+            <td></td>
+          </tr>
+        </table>
+        <table style="width:100%">
+        <tr>
+          <th>pictures</th>
+          <th>examples.</th>
+        </tr>
+        <tr>
+          <td><img src= "Electronics/ep1.png" style="width:450px "></td>
+          <td>Go to the 'Mods' website and select program</td>
+        </tr>
+        <tr>
+          <td><img src= "Electronics/ep2.png" style="width:450px "></td>
+          <td>Select open server program</td>
+        </tr>
+        <tr>
+          <td><img src= "Electronics/ep3.png" style="width:450px "></td>
+          <td>choose mil 2D PCB png</td>
+        </tr>
+        <tr>
+          <td><img src= "Electronics/ep4.png" style="width:450px "></td>
+          <td>Next upload the image of the FTDI traces and select traces.</td>
+        </tr>
+        <tr>
+          <td><img src= "Electronics/ep6.png" style="width:450px "></td>
+          <td>This should be your result</td>
+        </tr>
+        <tr>
+          <td><img src= "Electronics/ep7.png" style="width:450px "></td>
+          <td>Next upload the picutre of the outline and select outline, this should be your outline.</td>
+        </tr>
+        <tr>
+          <td><img src= "Electronics/ep8.png" style="width:450px "></td>
+          <td>Now do the same for the UPDI.</td>
+        </tr>
+        <tr>
+          <td><img src= "Electronics/ep9.png" style="width:450px "></td>
+          <td>This should be the result for UPDI traces.</td>
+        </tr>
+        <tr>
+          <td><img src= "Electronics/ep11.png" style="width:450px "></td>
+          <td>This should be the result for UPDI outline.</td>
+        </tr>
+        <tr>
+          <td><img src= "Electronics/ep12.jpg" style="width:450px "></td>
+          <td>This is the CNC machine that I will be using to mill out the PCBs.</td>
+        </tr>
+        <tr>
+          <tr>
+            <td><img src= "Electronics/tracecutter.jpg" style="width:450px "></td>
+            <td>This is the trace cutter tool bit. It will be used first to cut out the traces of the PCB. This tool bit should be using the second speed setting on the rotary tool.</td>
+          </tr>
+          <tr>
+            <tr>
+              <td><img src= "Electronics/outlinecutter.jpg" style="width:450px "></td>
+              <td>This is the outline cutter. There are two cutters the longer ones are meant to cut through hole for vertical pads while the short ones are meant to cut outlines. This tool bit should be using the first speed setting on the rotary tool.</td>
+            </tr>
+            <tr>
+          <td><img src= "Electronics/ep13.jpg" style="width:450px "></td>
+          <td>This is how my FTDI PCB looks like after I am done milling it. I had to sand it to remove the burs and give it an overall clean look.</td>
+        </tr>
+        <tr>
+          <td><img src= "Electronics/ep14.jpg" style="width:450px "></td>
+          <td>Soldering the compoents onto the board</td>
+        </tr>
+        <tr>
+          <td><img src= "Electronics/ep16.jpg" style="width:450px "></td>
+          <td>Removing the excess copper covering the USB header to prevent a short.</td>
+        </tr>
+        <tr>
+          <td><img src= "Electronics/ep17.jpg" style="width:450px "></td>
+          <td>YAAAAA. That is the FTDI done now time for the UPDI.</td>
+        </tr>
+        <tr>
+          <td><img src= "Electronics/ep18.jpg" style="width:450px "></td>
+          <td>Soldering the componets on the UPDI</td>
+        </tr>
+        <tr>
+          <td><img src= "Electronics/ep19.jpg" style="width:450px "></td>
+          <td>This is my final results. I also labelled the different headers on the UPDI so I am able to idenifty which header belongs to which part later on.</td>
+        </tr>
 
-
-
+      </table>
+      <h3 style="color:LightGray;">Production Errors</h3>
+      <h4 style="color:LightGray;">Milling Errors</h4>
+      <p>The image below shows the errors that I encountered while soldering the UPDI. I made an error while soldering the header and decided to use the heat gun to fix it. However, I heated the part for too long causing parts of the
+        traces of the header to come off. Thankfully it was on one of the unused headers.
+      </p>
+      <img src= "Electronics/ep20.jpg" style="width:450px ">
 
       </div>
     </div>

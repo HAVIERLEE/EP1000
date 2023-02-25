@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Electronics Production & Design</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+  </head>
+
+
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>EP1001: Electronics Production & Design</h1>
+    </div>
+
+    <div id="content">
+      <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="../about me.html">About Me</a>
+        <a href="../FablabSafety.html">Fablab Safety</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Blog
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../Blog/HTML.html">Web Development</a>
+          <a href="../Blog/vectorvsrastor.html">Vector Vs Raster</a>
+          <a href="../Blog/htmlvscss.html">HTML and CSS</a>
+          <a href="../Blog/MusicBox.html">Creating a Music Box</a>
+          <a href="../Blog/Arduino.html">Arduino Test Log</a>
+          <a href="../Blog/Printing1.html">3D Printing Attempts</a>
+        </div>
+
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">EP1001
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../EP1001/Electronics.html">Electronics Production</a>
+          <a href="../EP1001/ElectronicsD.html">Electronics Design</a>
+          <a href="../EP1001/CNC.html">2D Computer Controlled Machining</a>
+          <a href="../EP1001/Embedded.html">Embedded Programming</a>
+          <a href="../EP1001/Moldcast.html">Molding & Casting</a>
+
+          <a href="../EP1001/Interface.html">Interface & Applications Programming</a>
+        </div>
+        </div>
+
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Guides
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../Lessons/3DPrinting1.html">Fusion360: Knight Piece</a>
+          <a href="../Lessons/A3DPrinting1.html">3D Printing</a>
+          <a href="../Lessons/Vector.html">Vector</a>
+          <a href="../Lessons/Rastor.html">Raster</a>
+        </div>
+        </div>
+        <a href="../tooltable.html">Tool Table</a>
+        <a href="../project.html">Final Project</a>
+        <a href="projectEP1001.html">EP1001 Final Project</a>
+      </div>
+      <div id="main">
+        <div id="aaa">
+          <h2 style="color:LightGray;">Introduction</h2>
+          <p>This section of the blog talks about what I learnt about embbed progarmming. Basically, after creating the board in eletronic design, I would now have to program it. For this part, I will
+            be using arduino IDE. You can follow these steps to understand how I use it to program this baord.
+          </p>
+          <p>Firstly, go to SpenceKonde's repository at github and find the installation link</p>
+          <img src= "Electronics/em1.png" style="width:1000px">
+          <p>Secondly, copy the link hilighted in the picture below.</p>
+          <img src= "Electronics/em2.png" style="width:1000px">
+          <p>Next paste the link under preference in arduino IDE.</p>
+          <img src= "Electronics/em3.png" style="width:1000px ">
+          <p>Then go to Tools > Board > megaTinyCore > and select Attiny412</p>
+          <img src= "Electronics/em4.png" style="width:1000px ">
+          <p>Change the progarmmer into the highlighted Serial UPDI - SLOW 57600 baud</p>
+          <img src= "Electronics/em5.png" style="width:1000px">
+          <p>Select the 8Mhz internal clock</p>
+          <img src= "Electronics/em6.png" style="width:1000px ">
+          <p>The picture below shows a very basic code to test the board. It just blinks the existing LED on the board every half a second.</p>
+          <img src= "Electronics/em7.png" style="width:1000px">
+          <p>The Board should be connected as shown below. USB > FTDI > UPDI > ATTiny412</p>
+          <img src= "Electronics/em8.png" style="width:1000px ">
+          <p>Lastly this is my result.</p>
+          <img src= "Electronics/em9.gif" style="width:1000px ">
+
+      </div>
+    </div>
+    </div>
+    <div id="footer">
+        Copyright &copy; 2023 Javier Lee.
+    </div>
+
+
+ </div>
+ <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+</body>
+</html>

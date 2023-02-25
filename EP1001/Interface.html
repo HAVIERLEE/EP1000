@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Electronics Production & Design</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet.css" />
+  </head>
+
+
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>EP1001: Electronics Production & Design</h1>
+    </div>
+
+    <div id="content">
+      <div class="navbar">
+        <a href="../index.html">Home</a>
+        <a href="../about me.html">About Me</a>
+        <a href="../FablabSafety.html">Fablab Safety</a>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Blog
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../Blog/HTML.html">Web Development</a>
+          <a href="../Blog/vectorvsrastor.html">Vector Vs Raster</a>
+          <a href="../Blog/htmlvscss.html">HTML and CSS</a>
+          <a href="../Blog/MusicBox.html">Creating a Music Box</a>
+          <a href="../Blog/Arduino.html">Arduino Test Log</a>
+          <a href="../Blog/Printing1.html">3D Printing Attempts</a>
+        </div>
+
+        </div>
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">EP1001
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../EP1001/Electronics.html">Electronics Production</a>
+          <a href="../EP1001/ElectronicsD.html">Electronics Design</a>
+          <a href="../EP1001/CNC.html">2D Computer Controlled Machining</a>
+          <a href="../EP1001/Embedded.html">Embedded Programming</a>
+          <a href="../EP1001/Moldcast.html">Molding & Casting</a>
+
+          <a href="../EP1001/Interface.html">Interface & Applications Programming</a>
+        </div>
+        </div>
+
+        <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Guides
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+          <a href="../Lessons/3DPrinting1.html">Fusion360: Knight Piece</a>
+          <a href="../Lessons/A3DPrinting1.html">3D Printing</a>
+          <a href="../Lessons/Vector.html">Vector</a>
+          <a href="../Lessons/Rastor.html">Raster</a>
+        </div>
+        </div>
+        <a href="../tooltable.html">Tool Table</a>
+        <a href="../project.html">Final Project</a>
+      </div>
+      <div id="main">
+        <div id="aaa">
+          <h2 style="color:LightGray;">Introduction</h2>
+          <p>This section of the blog talks about what I learnt about Interface and application programming..</p>
+
+          <h3 style="color:LightGray;">Electronics Production</h3>
+          <p>This page talks about how I used the "processing" application ad how we can use it to interface with my Attiny412 board. Just like the name of this section implies!
+            Firstly you will need to install 'processing'. One thing unique about processing is that is also used by some artist to do digital works of art.
+          </p>
+
+          <h3 style="color:LightGray;">Making a FTDI and UPD PCB</h3>
+        <table style="width:100%">
+        <tr>
+          <th>pictures</th>
+          <th>examples.</th>
+        </tr>
+        <tr>
+          <td><img src= "Electronics/I6.png" style="width:750px "></td>
+          <td>Before we beign go to Sketch > Import libary > Manage libary.</td>
+        </tr>
+        <tr>
+          <td><img src= "Electronics/I5.png" style="width:450px "></td>
+          <td>Next install the Arduino libary. This allows processing control Arduino boards running the Firmata firmwave</td>
+        </tr>
+        <tr>
+          <td><img src= "Electronics/I3.png" style="width:450px "></td>
+          <td>For my first program I am going to draw a human. Each line of code which can be seen better in the next image creates a shape in a certain size on a set coordinate in the background.
+          "shape (*coordinate* X, Y, *size* X,Y)"
+          </td>
+        </tr>
+        <tr>
+          <td><img src= "Electronics/I3.5.png" style="width:450px "></td>
+          <td>Huzzah! A Man of Quality! </td>
+        </tr>
+
+        <tr>
+          <td><img src= "Electronics/I4.png" style="width:450px "></td>
+          <td>This next code generates circles of varying colours.</td>
+        </tr>
+
+        <tr>
+          <td><img src= "Electronics/I7.png" style="width:350px "></td>
+          <td><img src= "Electronics/I8.png" style="width:350px "></td>
+        </tr>
+
+        <tr>
+          <td>Finally for the assignment, I will have to use arduino and process to interface with my board. On the processing side, I have code that create a triangle "button" on the screen when my mouse hovers over it
+          changes colour from a bright red to a dark red to indicate that it is press. When it is 'pressed' it communicates with the arduino through the serial port and sends the letter "H". If the button is not pressed, it send a "L".</td>
+          <td>On the Arduino side, it reads the serial port. When a 'H' is received it lights up the LED and when an 'L' is received it turns it off. </td>
+        </tr>
+
+      </table>
+      <p>This is my final result of the code working
+      </p>
+      <img src= "Electronics/I9.gif" style="width:100% ">
+
+      <p>Although this section is light on content, it gave me insight on how the code of my final project is going to function. Bascailly through the serial port, my computer is going to send the signals to my PCB which will
+      then process them and in turn control my steppers.</p>
+      </div>
+    </div>
+    </div>
+    <div id="footer">
+        Copyright &copy; 2023 Javier Lee.
+    </div>
+
+
+ </div>
+ <script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(e) {
+  if (!e.target.matches('.dropbtn')) {
+  var myDropdown = document.getElementById("myDropdown");
+    if (myDropdown.classList.contains('show')) {
+      myDropdown.classList.remove('show');
+    }
+  }
+}
+</script>
+</body>
+</html>
