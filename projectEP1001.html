@@ -79,7 +79,7 @@
             <tr>
               <td><img src="EP1001PIC/presentation.png" width="560" height="315"></td>
 
-              <td><iframe width="560" height="315" src="https://www.youtube.com/embed/rZxKXIcD22U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <td><iframe width="560" height="315" src="https://www.youtube.com/embed/L7kzOf600ng" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
               </td>
           </tr>
           </table>
@@ -292,7 +292,7 @@
           </tr>
 
           <tr>
-            <td><img src="EP1001PIC/PSUbox.jpg" style="width:300px "></td>
+            <td><img src="EP1001PIC/PSUbox.png" style="width:300px "></td>
             <td>
 
               <p>I also made a box for my power supply.
@@ -370,7 +370,7 @@
 
       <tr>
       <td>
-      <img src="EP1001PIC/chips.jpg" style="width:450px ">
+      <img src="EP1001PIC/chips.jpg" style="width:600px ">
       </td>
       <td>
         <p>
@@ -390,7 +390,32 @@
 
       <tr>
       <td>
-      <img src="EP1001PIC/ATmegasch1.png" style="width:450px ">
+      <img src="EP1001PIC/cirbre.png" style="width:600px ">
+      </td>
+      <td>
+        <p>
+          <h4>CNC Machine Circuit Breakdown</h4>
+          For my CNC machine, I decided to go with the bare minimum. I needed 4 stepper motors that move with the 3 axis (X,Y,Z). One of these steppers will run of a slave driver that follows the X axis.
+          The picture on the side shows the overall breakdown of the electronics a 24V power supply powers the CNC shield which powers the 4 stepper motors. The ATmega328 PCB will be connected to my laptop via the serial port.
+          So my list of pins are:
+          <ul>
+            <li>Pin 0: RX (Serial)
+            <li>Pin 1: TX (Serial)
+            <li>Pin 2:X Axis (Step)
+            <li>Pin 3:Y Axis (Step)
+            <li>Pin 4:Z Axis (Step)
+            <li>Pin 5:X Axis (Dir)
+            <li>Pin 6:Y Axis (Dir)
+            <li>Pin 7:Z Axis (Dir)
+            <li>VCC & GND
+          </ul>
+        </p>
+      </td>
+      </tr>
+
+      <tr>
+      <td>
+      <img src="EP1001PIC/ATmegasch1.png" style="width:600px ">
       </td>
       <td>
         <p>
@@ -408,7 +433,7 @@
 
       <tr>
       <td>
-      <img src="EP1001PIC/ATmegasch2.png" style="width:450px ">
+      <img src="EP1001PIC/ATmegasch2.png" style="width:600px ">
       </td>
       <td>
         <p>
